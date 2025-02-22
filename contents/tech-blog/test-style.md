@@ -9,7 +9,7 @@ lastEditedDate: 2024-09-27T13:50:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-08-14T00:00:00.000+09:00
-views: 45
+views: 40
 ---
 
   
@@ -80,13 +80,13 @@ const list = [a, b]
 > 💡 これはcalloutです  
   
   
-twitter Embedテスト  
+Twitter Embedテスト  
   
   
 [https://twitter.com/elonmusk/status/1834213015857889706](https://twitter.com/elonmusk/status/1834213015857889706)  
   
   
-youtube Embedテスト  
+YouTube Embedテスト  
   
   
 [https://www.youtube.com/watch?v=CmDv7ww6ikU](https://www.youtube.com/watch?v=CmDv7ww6ikU)  
