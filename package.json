@@ -3,14 +3,24 @@
   "version": "1.0.0",
   "scripts": {
     "textlint": "textlint",
-    "lefthook": "lefthook"
+    "lefthook": "lefthook",
+    "updateViews": "ts-node batch/updateViews.ts"
   },
   "devDependencies": {
     "@textlint/textlint-plugin-markdown": "^14.4.2",
+    "@types/node": "^22.13.5",
     "lefthook": "^1.10.11",
     "textlint": "^14.4.2",
     "textlint-rule-no-empty-section": "^1.1.0",
     "textlint-rule-preset-japanese": "^10.0.4",
-    "textlint-rule-prh": "^6.0.0"
+    "textlint-rule-prh": "^6.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "@google-analytics/data": "^4.12.0",
+    "dotenv": "^16.4.7"
   }
 }
