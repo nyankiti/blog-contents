@@ -38,10 +38,10 @@ jobs:
           git add -N .
           git diff --name-only --exit-code
         continue-on-error: true
-      - name: update contents_last_updated.tag
-        working-directory: packages/gha-worker
-        run: node dist/update-tag/index.js
-        if: steps.diff.outcome == 'failure'
+      # TODO: ブログの更新を伝えるための新たな手段を検討する
+      # - name: update contents_last_updated.tag
+      #   run: node dist/update-tag/index.js
+      #   if: steps.diff.outcome == 'failure'
       - name: commit and push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
