@@ -6,5 +6,27 @@
   "lpubsppop01.autoTimeStamp.modifiedTimeStart": "^lastEditedAt: ",
   "lpubsppop01.autoTimeStamp.momentFormat": "\"YYYY-MM-DDTHH:mm:ss+09:00\"",
   "vsnotes.defaultNotePath": "~/src/blog-contents/contents",
+  "vsnotes.tokens": [
+    {
+      "type": "datetime",
+      "token": "{dt}",
+      "format": "YYYY-MM-DD",
+      "description": "Insert formatted datetime."
+    },
+    {
+      "type": "title",
+      "token": "{title}",
+      "description": "Insert note title from input box.",
+      "format": "Untitled"
+    },
+    {
+      "type": "extension",
+      "token": "{ext}",
+      "description": "Insert file vsnotes.",
+      "format": "md"
+    }
+  ],
+  "vsnotes.defaultNoteTitle": "{dt}-{title}.{ext}",
+  "vsnotes.defaultNoteName": "no-title",
   "vsnotes.templates": ["tech_blog"]
 }

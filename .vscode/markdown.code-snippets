@@ -4,9 +4,9 @@
         "body": [
             "---",
             "title: \"\"",
-            "slug: \"\"",
+            "slug: \"${TM_FILENAME}\"",
             "tags: ['tech','poem']",
-            "published: true",
+            "published: false",
             "deleted: false",
             "publishedAt: \"${CURRENT_YEAR}-$CURRENT_MONTH-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+09:00\"",
             "lastEditedAt: \"${CURRENT_YEAR}-$CURRENT_MONTH-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+09:00\"",
