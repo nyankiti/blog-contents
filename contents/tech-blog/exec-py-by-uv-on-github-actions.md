@@ -5,7 +5,7 @@ date: 2025-01-11T01:24:00.000Z
 slug: exec-py-by-uv-on-github-actions
 tags: ["tech","Python"]
 excerpt: undefined
-lastEditedDate: 2025-02-08T09:40:00.000Z
+updatedAt: 2025-02-08T09:40:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2025-01-11

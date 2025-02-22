@@ -5,7 +5,7 @@ date: 2024-10-27T09:31:00.000Z
 slug: slides-browsing
 tags: ["poem"]
 excerpt: undefined
-lastEditedDate: 2024-11-04T14:17:00.000Z
+updatedAt: 2024-11-04T14:17:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-11-04

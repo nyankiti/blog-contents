@@ -5,7 +5,7 @@ date: 2024-09-01T13:46:00.000Z
 slug: remix-notion-blog-give-up
 tags: ["tech","remix"]
 excerpt: undefined
-lastEditedDate: 2024-09-07T12:37:00.000Z
+updatedAt: 2024-09-07T12:37:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-08-31

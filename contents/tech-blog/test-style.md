@@ -5,7 +5,7 @@ date: 2024-07-06T01:48:00.000Z
 slug: test-style
 tags: ["tech","poem"]
 excerpt: 要約要約
-lastEditedDate: 2024-09-27T13:50:00.000Z
+updatedAt: 2024-09-27T13:50:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-08-14T00:00:00.000+09:00

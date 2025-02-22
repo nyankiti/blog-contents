@@ -5,7 +5,7 @@ date: 2024-09-07T02:17:00.000Z
 slug: unified-notion-bookmark
 tags: ["tech"]
 excerpt: undefined
-lastEditedDate: 2024-09-25T15:45:00.000Z
+updatedAt: 2024-09-25T15:45:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-09-14

@@ -5,7 +5,7 @@ date: 2024-08-11T09:08:00.000Z
 slug: pageviews-by-gadataapi
 tags: ["tech"]
 excerpt: undefined
-lastEditedDate: 2024-09-15T04:02:00.000Z
+updatedAt: 2024-09-15T04:02:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-09-12T00:00:00.000+09:00

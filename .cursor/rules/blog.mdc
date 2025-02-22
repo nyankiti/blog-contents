@@ -10,15 +10,14 @@ globs: *.md
 記事のメタ情報は以下の形式のFront Matterで管理します。
 ```
 ---
-title: {}
-slug: {}
-tags: ["tech","poem"]
-excerpt: {}
-isPublished: false
-isDeleted: false
-publishedAt: {YYYY-MM-DD:HH:MM:SS}
-lastEditedAt: {YYYY-MM-DD:HH:MM:SS}
-views: 0
+title: string
+slug: string
+tags: string[]
+published: boolean
+deleted: boolean
+publishedAt: date
+lastEditedAt: date
+views: number
 ---
 ```
 2. 執筆支援の基本方針

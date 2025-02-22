@@ -5,7 +5,7 @@ date: 2025-02-08T03:37:00.000Z
 slug: npm-workspace-shared
 tags: ["tech","next","npm"]
 excerpt: undefined
-lastEditedDate: 2025-02-08T07:28:00.000Z
+updatedAt: 2025-02-08T07:28:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2025-02-08

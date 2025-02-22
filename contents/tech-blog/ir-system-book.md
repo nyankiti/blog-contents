@@ -5,7 +5,7 @@ date: 2024-10-06T11:48:00.000Z
 slug: ir-system-book
 tags: ["bookreview","tech"]
 excerpt: undefined
-lastEditedDate: 2024-10-09T10:26:00.000Z
+updatedAt: 2024-10-09T10:26:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-10-06

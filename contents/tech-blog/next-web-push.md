@@ -5,7 +5,7 @@ date: 2024-09-11T03:41:00.000Z
 slug: next-web-push
 tags: ["tech","next"]
 excerpt: undefined
-lastEditedDate: 2024-09-28T05:44:00.000Z
+updatedAt: 2024-09-28T05:44:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-09-25

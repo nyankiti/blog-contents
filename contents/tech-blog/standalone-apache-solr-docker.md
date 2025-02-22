@@ -5,7 +5,7 @@ date: 2024-10-09T10:25:00.000Z
 slug: standalone-apache-solr-docker
 tags: ["tech"]
 excerpt: undefined
-lastEditedDate: 2024-10-15T13:34:00.000Z
+updatedAt: 2024-10-15T13:34:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-10-15

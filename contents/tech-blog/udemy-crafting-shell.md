@@ -5,7 +5,7 @@ date: 2024-08-25T04:40:00.000Z
 slug: udemy-crafting-shell
 tags: ["tech"]
 excerpt: undefined
-lastEditedDate: 2024-09-14T04:56:00.000Z
+updatedAt: 2024-09-14T04:56:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-09-04T00:00:00.000+09:00

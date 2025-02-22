@@ -5,7 +5,7 @@ date: 2024-09-11T03:52:00.000Z
 slug: next-blog-summary
 tags: ["poem","tech","next"]
 excerpt: undefined
-lastEditedDate: 2024-12-03T13:57:00.000Z
+updatedAt: 2024-12-03T13:57:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-12-03
@@ -76,7 +76,7 @@ export const Post = defineDocumentType(() => ({
   fields: {  
     title: { type: "string", required: true },  
     date: { type: "string", required: true },  
-    lastEditedDate: { type: "string", required: false },  
+    updatedAt: { type: "string", required: false },  
     tags: { type: "list", of: { type: "string" }, required: true },  
     isDeleted: { type: "boolean", required: false },  
     isPublished: { type: "boolean", required: false },  

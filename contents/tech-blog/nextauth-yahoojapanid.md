@@ -5,7 +5,7 @@ date: 2024-09-29T11:59:00.000Z
 slug: nextauth-yahoojapanid
 tags: ["tech","auth"]
 excerpt: undefined
-lastEditedDate: 2024-09-29T13:30:00.000Z
+updatedAt: 2024-09-29T13:30:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-09-29

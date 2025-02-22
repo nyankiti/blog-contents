@@ -5,7 +5,7 @@ date: 2024-11-30T01:31:00.000Z
 slug: apache-pulsar-catchup
 tags: ["tech","java"]
 excerpt: undefined
-lastEditedDate: 2024-11-30T09:52:00.000Z
+updatedAt: 2024-11-30T09:52:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-11-30

@@ -5,7 +5,7 @@ date: 2024-12-14T02:59:00.000Z
 slug: create-kubernetes-operator
 tags: ["kubernetes","tech"]
 excerpt: undefined
-lastEditedDate: 2024-12-16T14:53:00.000Z
+updatedAt: 2024-12-16T14:53:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-12-16

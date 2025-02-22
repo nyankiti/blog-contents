@@ -5,7 +5,7 @@ date: 2024-12-26T10:38:00.000Z
 slug: uv-with-vscode
 tags: ["tech","Python"]
 excerpt: undefined
-lastEditedDate: 2024-12-31T02:10:00.000Z
+updatedAt: 2024-12-31T02:10:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-12-26
