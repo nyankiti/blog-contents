@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { extractTwitterUrl } from "./utils";
+import * as React from "react";
 
 // layout.tsxにて https://platform.twitter.com/widgets.js を読み込んでいる
 declare const twttr: {
@@ -26,11 +25,11 @@ type EmbeddedTweetProps = {
 export const TweetEmbed: React.FC<EmbeddedTweetProps> = (props) => {
   // x.comは適切にembedされないため、twitter.comに変換する必要がある
   const xlink = props.url.replace("x.com", "twitter.com");
-  const rootRef = useRef<HTMLDivElement>(null);
+  const rootRef = React.useRef<HTMLDivElement>(null);
 
   const key = JSON.stringify(props);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (rootRef.current !== null) {
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       typeof twttr !== "undefined" && twttr.widgets.load(rootRef.current);
