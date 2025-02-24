@@ -2,8 +2,9 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "NodeNext",
-    "rootDir": "./batch",
+    "rootDir": "./",
     "moduleResolution": "NodeNext",
     "baseUrl": "./",
     "sourceMap": true,
@@ -13,7 +14,8 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "newLine": "lf"
+    "newLine": "lf",
+    "jsx": "preserve"
   },
   "exclude": ["./dist", "./node_modules"]
 }
