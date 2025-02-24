@@ -5,7 +5,7 @@ date: 2024-07-06T01:48:00.000Z
 slug: test-style
 tags: ["tech","poem"]
 excerpt: 要約要約
-updatedAt: 2025-02-24T14:57:14+09:00
+updatedAt: 2025-02-24T15:13:59+09:00
 isPublished: true
 isDeleted: false
 publishedAt: 2024-08-14T00:00:00.000+09:00
@@ -81,7 +81,7 @@ const list = [a, b]
   
 Twitter Embedテスト  
   
-<TweetEmbed href="https://twitter.com/elonmusk/status/1834213015857889706" />
+<TweetEmbed url="https://twitter.com/elonmusk/status/1834213015857889706" />
   
   
 YouTube Embedテスト  
