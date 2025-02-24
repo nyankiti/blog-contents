@@ -1,26 +1,23 @@
-import { Suspense } from "react";
-import { fetchSiteMetadata, getFaviconUrl } from "./utils";
+"use client";
+
+import { getFaviconUrl, SiteMetadata } from "./utils";
+import he from "he";
 
 type Props = {
   href: string;
   siteUrl: string;
 };
 
+declare const globalMetadataMap: Record<string, SiteMetadata | undefined>;
+
 export const Bookmark: React.FC<Props> = ({ href, siteUrl }) => {
-  return (
-    <Suspense fallback={<BookmarkSkeleton />}>
-      <BookmarkInner href={href} siteUrl={siteUrl} />
-    </Suspense>
-  );
-};
-
-const BookmarkInner: React.FC<Props> = async ({ href, siteUrl }) => {
-  const url = new URL(href, siteUrl); // hrefを相対パスで指定された場合は SITE_URL利用されるようにする
-  const metadata = await fetchSiteMetadata(url.href);
-
+  // metadataMapはMDXのスコープから注入される。※ 実装側から注入する必要がある
+  const metadata = globalMetadataMap[href];
   if (!metadata) {
     return <BookmarkError href={href} />;
   }
+
+  const url = new URL(href, siteUrl); // hrefを相対パスで指定された場合は SITE_URL利用されるようにする
 
   return (
     <a
@@ -31,12 +28,12 @@ const BookmarkInner: React.FC<Props> = async ({ href, siteUrl }) => {
     >
       <div className="flex flex-col p-2 flex-1 h-full hover:opacity-80">
         <div className="font-bold line-clamp-3 break-words">
-          {metadata.title ? metadata.title : metadata.url}
+          {he.decode(metadata.title ? metadata.title : metadata.url)}
         </div>
 
         <div className="flex-1 mt-2">
           <div className="text-sm line-clamp-2 overflow-wrap break-words">
-            {metadata.description}
+            {he.decode(metadata.description ?? "")}
           </div>
         </div>
 
@@ -78,25 +75,5 @@ const BookmarkError: React.FC<{ href: string }> = ({ href }) => {
       <p className="font-medium">ページを読み込めませんでした</p>
       <div className="text-sm text-text-secondary">{href}</div>
     </a>
-  );
-};
-
-const BookmarkSkeleton: React.FC = () => {
-  return (
-    <div className="flex gap-2 h-36 w-full rounded-lg border border-link-card-border overflow-hidden">
-      <div className="flex flex-col p-2 flex-1 h-full">
-        <div className="flex flex-col gap-2">
-          <div className="w-full h-4 bg-gray-200 rounded"></div>
-          <div className="w-4/5 h-4 bg-gray-200 rounded"></div>
-        </div>
-
-        <div className="flex flex-col gap-2 mt-6 flex-1">
-          <div className="w-full h-4 bg-gray-200 rounded"></div>
-          <div className="w-4/5 h-4 bg-gray-200 rounded"></div>
-        </div>
-        <div className="w-4 h-4 bg-gray-200 rounded"></div>
-      </div>
-      <div className="w-40 h-full bg-gray-200"></div>
-    </div>
   );
 };
