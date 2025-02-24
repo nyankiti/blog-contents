@@ -192,8 +192,7 @@ export default Unified;
 以下動画を参考にすると、asyncのremarkPlugin作成もできそう？（未検証）  
 asyncが使えるとpluginの自由度がさらに上がるので気になる方はぜひ。  
   
-  
-[https://www.youtube.com/watch?v=NmXw8yMTjys&t=978s&ab_channel=KentC.Dodds](https://www.youtube.com/watch?v=NmXw8yMTjys&t=978s&ab_channel=KentC.Dodds)  
+<YouTubeEmbed url="https://www.youtube.com/watch?v=NmXw8yMTjys&t=978s&ab_channel=KentC.Dodds" />
   
   
 ## 余談  

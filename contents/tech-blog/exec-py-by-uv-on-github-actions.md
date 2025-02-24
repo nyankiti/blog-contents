@@ -140,8 +140,7 @@ Pythonのバージョンを指定してたい場合は、uvコマンド経由で
   
 雑談ですがuvの環境を整えていて思ったこと↓  
   
-  
-https://x.com/soken_nowi/status/1877913565216284972  
+<TweetEmbed url="https://x.com/soken_nowi/status/1877913565216284972" />  
   
   
 以下のようにあるのでnode.jsプロジェクトにおける`npm install`的なstepを踏まなくて良いのは便利だなと  

@@ -64,20 +64,16 @@ const list = [a, b]
     
 <Bookmark href="https://zenn.dev/mizchi/articles/remix-cloudflare-pages-supabase"/>
   
-以下はメンション  
-  
+以下はリンク
   
 [https://zenn.dev/mizchi/articles/remix-cloudflare-pages-supabase](https://zenn.dev/mizchi/articles/remix-cloudflare-pages-supabase)  
   
   
 以下はdivider  
   
-  
 ---  
   
-  
 > 💡 これはcalloutです  
-  
   
 Twitter Embedテスト  
   
@@ -86,9 +82,7 @@ Twitter Embedテスト
   
 YouTube Embedテスト  
   
-  
-[https://www.youtube.com/watch?v=CmDv7ww6ikU](https://www.youtube.com/watch?v=CmDv7ww6ikU)  
-  
+<YouTubeEmbed url="https://www.youtube.com/watch?v=CmDv7ww6ikU" />  
   
 本ブログのBookmark  
 oepngraph-imageのテストも含む  
