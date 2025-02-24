@@ -1,10 +1,3 @@
-import { LRUCache } from "lru-cache";
-
-const metadataCache = new LRUCache<string, SiteMetadata>({
-  max: 500, // キャッシュするアイテムの最大数
-  ttl: 1000 * 60 * 60 * 24, // 24時間のTTL
-});
-
 export function extractTwitterUrl(url: string): string | null {
   if (/https?:\/\/(www\.)?x.com\/\w{1,15}\/status\/.*/.test(url)) {
     // x.comは適切にembedされないため、twitter.comに変換する必要がある
@@ -42,10 +35,6 @@ export type SiteMetadata = {
 export async function fetchSiteMetadata(
   url: string
 ): Promise<SiteMetadata | null> {
-  // キャッシュをチェック
-  const cached = metadataCache.get(url);
-  if (cached) return cached;
-
   try {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 2000); // 2秒でタイムアウト
@@ -97,8 +86,6 @@ export async function fetchSiteMetadata(
       }
     }
 
-    // キャッシュに保存
-    metadataCache.set(url, metadata);
     return metadata;
   } catch {
     return null;
