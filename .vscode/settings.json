@@ -28,5 +28,8 @@
   ],
   "vsnotes.defaultNoteTitle": "{dt}-{title}.{ext}",
   "vsnotes.defaultNoteName": "no-title",
-  "vsnotes.templates": ["tech_blog"]
+  "vsnotes.templates": ["tech_blog"],
+  "markdown.copyFiles.destination": {
+    "contents/tech-blog/**/*": "images/${documentBaseName}/"
+  }
 }

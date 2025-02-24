@@ -5,7 +5,7 @@ date: 2024-07-06T01:48:00.000Z
 slug: test-style
 tags: ["tech","poem"]
 excerpt: 要約要約
-updatedAt: 2025-02-24T19:34:48+09:00
+updatedAt: 2025-02-24T20:38:21+09:00
 isPublished: true
 isDeleted: false
 publishedAt: 2024-08-14T00:00:00.000+09:00
@@ -90,3 +90,6 @@ oepngraph-imageのテストも含む
 <Bookmark href="https://sokes-nook.net/blog/next-web-push" siteUrl="https://sokes-nook.net" />
 
   
+
+以下は画像
+![alt text](images/test-style/onepiece01_luffy.png)
