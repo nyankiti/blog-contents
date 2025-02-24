@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-// layout.tsxにて https://platform.twitter.com/widgets.js を読み込んでいる
+// layout.tsx等で https://platform.twitter.com/widgets.js を読み込む必要がある
 declare const twttr: {
   widgets: {
     load: (element?: Element) => Promise<void>;
@@ -22,7 +22,7 @@ type EmbeddedTweetProps = {
   dnt?: true;
 };
 
-export const TweetEmbed: React.FC<EmbeddedTweetProps> = (props) => {
+const TweetEmbed: React.FC<EmbeddedTweetProps> = (props) => {
   // x.comは適切にembedされないため、twitter.comに変換する必要がある
   const xlink = props.url.replace("x.com", "twitter.com");
   const rootRef = React.useRef<HTMLDivElement>(null);
@@ -56,3 +56,5 @@ export const TweetEmbed: React.FC<EmbeddedTweetProps> = (props) => {
     </div>
   );
 };
+
+export default TweetEmbed;
