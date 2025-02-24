@@ -1,7 +1,5 @@
 name: update-contents
 on:
-  push:
-    branches: [main]
   schedule:
     - cron: "0 4,14 * * *" # 毎日 4時、14時 に実行
 # ワークフローに書き込み権限を与える ref:https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
