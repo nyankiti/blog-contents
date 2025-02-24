@@ -9,7 +9,7 @@ updatedAt: 2024-09-29T13:30:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-09-29
-views: 79
+views: 80
 ---
 import { Bookmark } from "../../components/Bookmark";
   
