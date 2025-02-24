@@ -12,7 +12,7 @@ declare const globalMetadataMap: Record<string, SiteMetadata | undefined>;
 
 export const Bookmark: React.FC<Props> = ({ href, siteUrl }) => {
   const url = new URL(href, siteUrl); // hrefを相対パスで指定された場合は SITE_URL利用されるようにする
-  // metadataMapはMDXのスコープから注入される。※ 実装側から注入する必要がある
+  // metadataMapはMDXのスコープから注入される。
   const metadata = globalMetadataMap[url.toString()];
   if (!metadata) {
     return <BookmarkError href={href} />;
