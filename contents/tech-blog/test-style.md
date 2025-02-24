@@ -5,7 +5,7 @@ date: 2024-07-06T01:48:00.000Z
 slug: test-style
 tags: ["tech","poem"]
 excerpt: 要約要約
-updatedAt: 2025-02-24T21:36:11+09:00
+updatedAt: 2025-02-24T21:43:23+09:00
 isPublished: true
 isDeleted: false
 publishedAt: 2024-08-14T00:00:00.000+09:00
@@ -99,9 +99,6 @@ oepngraph-imageのテストも含む
 
 以下はgif画像
 ![alt text](images/test-style/dog-7011_256.gif)
-
-以下はwebp画像
-![alt text](images/test-style/onepiece01_luffy.webp)
 
 以下はsvg画像
 ![alt text](images/test-style/SVGアイコン.svg)
