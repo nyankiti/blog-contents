@@ -5,14 +5,13 @@ date: 2024-07-06T01:48:00.000Z
 slug: test-style
 tags: ["tech","poem"]
 excerpt: 要約要約
-updatedAt: 2025-02-24T15:27:12+09:00
+updatedAt: 2025-02-24T19:34:48+09:00
 isPublished: true
 isDeleted: false
 publishedAt: 2024-08-14T00:00:00.000+09:00
 views: 60
 ---
 import { Bookmark } from "../../components/Bookmark";
-import TweetEmbed from "../../components/TweetEmbed";
   
 # H1 heading  
   
