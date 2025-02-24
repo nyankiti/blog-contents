@@ -11,7 +11,7 @@ isDeleted: false
 publishedAt: 2024-11-30
 views: 41
 ---
-
+import { Bookmark } from "../../components/Bookmark";
   
 # Apache Pulsarとは  
   
@@ -31,12 +31,12 @@ springプロジェクトでは、2022年からapache pulsarのサポートを開
 参考  
   
 - 公式doc  
-  
-	[bookmark](https://pulsar.apache.org/docs/4.0.x/)  
+    
+    <Bookmark href="https://pulsar.apache.org/docs/4.0.x/" >
   
 - Apache Pulsarのマネージメントサービスである[Astra Streaming](https://www.datastax.com/lp/astra-registration)を提供するDataStax者の方による記事。メッセージング及びストリーミングテクノロジーの概観から始まり、Apache Kafkaとの違いを取り上げながらApache Pulsarについてわかりやすく解説されている。  
   
-	[bookmark](https://qiita.com/yoshiyuki_kono/items/839ca884eb52f6d0950e)  
+    <Bookmark href="https://qiita.com/yoshiyuki_kono/items/839ca884eb52f6d0950e" >
   
 - Yahoo!デベロッパーネットワークが公開している以下のスライド群  
 [https://www.docswell.com/tag/Apache Pulsar](https://www.docswell.com/tag/Apache%20Pulsar)  

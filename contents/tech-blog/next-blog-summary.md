@@ -11,7 +11,7 @@ isDeleted: false
 publishedAt: 2024-12-03
 views: 66
 ---
-
+import { Bookmark } from "../../components/Bookmark";
   
 本ブログの今月の収益🎉  
   
@@ -58,9 +58,8 @@ views: 66
   
 参考記事:  
   
-  
-[bookmark](https://zenn.dev/you_5805/articles/contentlayer)  
-  
+
+<Bookmark href="https://zenn.dev/you_5805/articles/contentlayer" />
   
 設定ファイルは以下  
   
@@ -171,8 +170,8 @@ ref: [https://github.com/remarkjs/react-markdown/issues/774](https://github.com/
 参考記事:   
   
   
-[bookmark](https://zenn.dev/yyykms123/articles/2023-12-03-adding-toc-to-nextjs-blog-using-tocbot)  
-  
+<Bookmark href="https://zenn.dev/yyykms123/articles/2023-12-03-adding-toc-to-nextjs-blog-using-tocbot" />
+
   
 実装は以下  
   
@@ -216,7 +215,7 @@ export const PcToc: React.FC = () => {
 参考:   
   
   
-[bookmark](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image)  
+<Bookmark href="https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image" />
   
   
 実装（style部分は長くなるため省略）  
@@ -449,7 +448,7 @@ const n2m = new NotionToMarkdown({
 以下の機能がVS Codeに追加されてからは画像の扱いもかなり楽になったので、そのうちnotion api利用は終わりそう。  
   
   
-[bookmark](https://zenn.dev/roboin/articles/1fa72705ff2e03)  
+<Bookmark href="https://zenn.dev/roboin/articles/1fa72705ff2e03" />
   
   
 また、（1円ととても少ないが）収益をブログから得るにあたって、業務で得た知識との棲み分けが難しいなと感じる。業務で得た知識は会社に帰属する認識でブログで利用するつもりはないが、業務きっかけて興味を持ち、プライベートの時間に深掘った技術をどこまでアウトプットすべきなのかが難しいところ。。。  

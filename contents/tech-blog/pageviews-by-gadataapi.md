@@ -11,7 +11,7 @@ isDeleted: false
 publishedAt: 2024-09-12T00:00:00.000+09:00
 views: 67
 ---
-
+import { Bookmark } from "../../components/Bookmark";
   
 ## はじめに  
   
@@ -179,11 +179,11 @@ export class GaApiClient {
 - [**Google Analytics Reporting APIでの発生したリクエスト数を確認する**](https://ponsuke-tarou.hatenablog.com/entry/2021/03/25/150451)  
 - [**Gatsbyで作ったサイトに人気記事のランキングを実装する【前編】**](https://komari.co.jp/column/14935/)  
   
-[bookmark](https://fwywd.com/tech/ga-popular-node-ts)  
+<Bookmark href="https://fwywd.com/tech/ga-popular-node-ts" >
   
   
-[bookmark](https://ponsuke-tarou.hatenablog.com/entry/2021/03/25/150451)  
+<Bookmark href="https://ponsuke-tarou.hatenablog.com/entry/2021/03/25/150451" >
   
   
-[bookmark](https://komari.co.jp/column/14935/)  
+<Bookmark href="https://komari.co.jp/column/14935/" >
   

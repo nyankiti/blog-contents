@@ -11,7 +11,7 @@ isDeleted: false
 publishedAt: 2024-09-29
 views: 79
 ---
-
+import { Bookmark } from "../../components/Bookmark";
   
 ## はじめに  
   
@@ -30,7 +30,7 @@ Next.jsを用いたアプリケーションにログイン機能を実装する�
 前提としてYahoo! JAPAN IDでログインを提供するためのID 連携の仕組みなどは以下で説明されているので事前に確認しておくと実装がわかりやすくなると思います。  
   
   
-[bookmark](https://developer.yahoo.co.jp/yconnect/v2/introduction.html)  
+<Bookmark href="https://developer.yahoo.co.jp/yconnect/v2/introduction.html" >
   
   
 利用用途に応じてこちらの[ガイドライン](https://developer.yahoo.co.jp/yconnect/v2/guideline.html)も参照しておくとさらに安心かと思います。[デザインガイドライン](https://developer.yahoo.co.jp/yconnect/loginbuttons.html)も用意されています。  
@@ -39,7 +39,7 @@ Next.jsを用いたアプリケーションにログイン機能を実装する�
 また、以下のYahoo!デベロッパーネットワークから、先にアプリケーションを作成し、OAuth2.0 および OpenID Connect用のClinet IDを発行しておく必要があります。  
   
   
-[bookmark](https://developer.yahoo.co.jp/yconnect/v2/)  
+<Bookmark href="https://developer.yahoo.co.jp/yconnect/v2/" >
   
   
 こちらで発行したClinet ID, シークレットは実装で利用するのでメモっておいてください。  

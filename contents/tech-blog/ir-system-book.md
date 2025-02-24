@@ -11,7 +11,7 @@ isDeleted: false
 publishedAt: 2024-10-06
 views: 20
 ---
-
+import { Bookmark } from "../../components/Bookmark";
   
 # はじめに  
   
@@ -21,8 +21,8 @@ views: 20
   
 今回は、『検索システム ― 実務者のための開発改善ガイドブック』を読み、その内容をまとめ、私が感じたことを共有したいと思います。本書は実務に即したアプローチで、検索システムの設計や改善方法について解説しており、開発者目線でとても有益な内容が詰まっています。  
   
-  
-[bookmark](https://www.lambdanote.com/products/ir-system)  
+
+<Bookmark href="https://www.lambdanote.com/products/ir-system" />
   
   
 # 読書時のメモ  
@@ -324,9 +324,8 @@ ECの場合、検索結果で1件として扱いたいデータをどのよう�
   
 これから先は完全ネタバレ要約みたいになってしまうのでメモも公開しません。ぜひ以下でお買い求めください。  
   
-  
-[bookmark](https://www.lambdanote.com/products/ir-system)  
-  
+
+<Bookmark href="https://www.lambdanote.com/products/ir-system" />
   
 ## 語彙  
   
@@ -351,5 +350,4 @@ ECの場合、検索結果で1件として扱いたいデータをどのよう�
 ちなみにQiitaで100いいね近くでバズっている以下記事も、~~出典明記されていませんが~~、構成や具体例が一致しているためこちらの本の要約になっているようです。  
   
   
-[bookmark](https://qiita.com/k_yamaki/items/2bd2284a2ddee542ad4d)  
-  
+<Bookmark href="https://qiita.com/k_yamaki/items/2bd2284a2ddee542ad4d" />

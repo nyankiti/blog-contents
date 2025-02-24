@@ -11,7 +11,7 @@ isDeleted: false
 publishedAt: 2025-02-08
 views: 37
 ---
-
+import { Bookmark } from "../../components/Bookmark";
   
 以下のような構成でモノレポではあるものの、それぞれ独立したnodeプロジェクトで運用していた状態から、npm workspaceを用いて共通処理置き場(sharedプロジェクト)を作成したのでその方法を紹介します。  
   
@@ -55,7 +55,7 @@ views: 37
 そもそもnpm workspaceとはという方は以下の記事がすごくわかりやすかったのでおすすめです。  
   
   
-[bookmark](https://zenn.dev/suin/scraps/20896e54419069)  
+<Bookmark href="https://zenn.dev/suin/scraps/20896e54419069" >
   
   
 ## やったこと   
@@ -226,5 +226,5 @@ Module not found: Can't resolve '@your-app/shared'
 全てのメソッドがshared/index.tsにまとまって一括でimportする構成はなんか微妙な気がする場合はexportを利用する手もあると思います。  
   
   
-[bookmark](https://zenn.dev/makotot/articles/5edb504ef7d2e6)  
+<Bookmark href="https://zenn.dev/makotot/articles/5edb504ef7d2e6" >
   

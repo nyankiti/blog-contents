@@ -11,7 +11,7 @@ isDeleted: false
 publishedAt: 2024-11-04
 views: 32
 ---
-
+import { Bookmark } from "../../components/Bookmark";
   
 個人的に新しい技術をキャッチアップする際、まず最初に既存の勉強会などのスライドをスライド共有サービスから探して全体を把握することが多いです。こちらの方法が意外とお勧めなので、スライド徘徊を勧めるだけの記事を書いてみようと思います。  
   
@@ -28,7 +28,7 @@ views: 32
 ### slideshare  
   
   
-[bookmark](https://www.slideshare.net/)  
+<Bookmark href="https://www.slideshare.net/" >
   
   
 Javaで検索した際の例:  
@@ -41,7 +41,7 @@ Javaで検索した際の例:
 ### **Speaker Deck**  
   
   
-[bookmark](https://speakerdeck.com/)  
+<Bookmark href="https://speakerdeck.com/" >
   
   
 Javaで検索した際の例:  
@@ -54,7 +54,7 @@ Javaで検索した際の例:
 ### **Docswell**  
   
   
-[bookmark](https://www.docswell.com/)  
+<Bookmark href="https://www.docswell.com/" >
   
   
 日本のエンジニア向けに開発されており、個人的にも最もUXが良いと感じている。カジュアルな内容から技術仕様の詳細解説まで存在する。  

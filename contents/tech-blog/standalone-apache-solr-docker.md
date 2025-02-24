@@ -11,7 +11,7 @@ isDeleted: false
 publishedAt: 2024-10-15
 views: 67
 ---
-
+import { Bookmark } from "../../components/Bookmark";
   
 # standaloneモードの**Apache SolrをDockerで動かしてみる**  
   
@@ -22,7 +22,7 @@ Apache Solrは全文検索ライブラリ Apache Licene(ルシーン)を用い�
 以下を参考にdockerを用いたstandaloneモードを動かしてみたのでその記録を紹介します。  
   
   
-[bookmark](https://solr.apache.org/guide/solr/latest/deployment-guide/solr-in-docker.html)  
+<Bookmark href="https://solr.apache.org/guide/solr/latest/deployment-guide/solr-in-docker.html" >
   
   
 利用したdocker-compose.yaml  
@@ -56,7 +56,7 @@ docker-compose up --build
 起動すると以下からsolrの管理画面にアクセスできるようになります。  
   
   
-[http://localhost:8983/solr/#/](http://localhost:8983/solr/#/)  
+[http://localhost:8983/solr/#/](http://localhost:8983/solr/#/) 
   
   
 コンテナに入ってデータをインデックス（[参考書籍](https://gihyo.jp/book/2017/978-4-7741-8930-7)にあるtechproductsをインデックスする方法はなさそう）  
@@ -181,7 +181,7 @@ Solrでは大量の検索トラフィックや、ハードウェア障害など�
 ## 参考文献  
   
   
-[bookmark](https://gihyo.jp/book/2017/978-4-7741-8930-7)  
+<Bookmark href="https://gihyo.jp/book/2017/978-4-7741-8930-7" >
   
   
 ⚠️注意  

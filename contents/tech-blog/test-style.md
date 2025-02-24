@@ -5,7 +5,7 @@ date: 2024-07-06T01:48:00.000Z
 slug: test-style
 tags: ["tech","poem"]
 excerpt: 要約要約
-updatedAt: 2025-02-24T11:42:24+09:00
+updatedAt: 2025-02-24T13:11:33+09:00
 isPublished: true
 isDeleted: false
 publishedAt: 2024-08-14T00:00:00.000+09:00
@@ -61,10 +61,8 @@ const list = [a, b]
 - [x] TODO3  
   
 以下はブックマーク  
-  
-  
-[bookmark](https://zenn.dev/mizchi/articles/remix-cloudflare-pages-supabase)  
-  
+    
+<Bookmark href="https://zenn.dev/mizchi/articles/remix-cloudflare-pages-supabase"/>
   
 以下はメンション  
   
@@ -100,5 +98,5 @@ oepngraph-imageのテストも含む
 <Bookmark href="https://sokes-nook.net/blog/next-web-push" siteUrl="https://sokes-nook.net" />
   
   
-[bookmark](https://sokes-nook.net/)  
+<Bookmark href="https://sokes-nook.net" siteUrl="https://sokes-nook.net" />
   
