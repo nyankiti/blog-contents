@@ -1,7 +1,7 @@
 "use client";
 
 import { getFaviconUrl, SiteMetadata } from "./utils";
-// import he from "he";
+import he from "he";
 
 type Props = {
   href: string;
@@ -27,14 +27,12 @@ export const Bookmark: React.FC<Props> = ({ href, siteUrl }) => {
     >
       <div className="flex flex-col p-2 flex-1 h-full hover:opacity-80">
         <div className="font-bold line-clamp-3 break-words">
-          {metadata.title ? metadata.title : metadata.url}
-          {/* {he.decode(metadata.title ? metadata.title : metadata.url)} */}
+          {he.decode(metadata.title ? metadata.title : metadata.url)}
         </div>
 
         <div className="flex-1 mt-2">
           <div className="text-sm line-clamp-2 overflow-wrap break-words">
-            {metadata.description}
-            {/* {he.decode(metadata.description ?? "")} */}
+            {he.decode(metadata.description ?? "")}
           </div>
         </div>
 
