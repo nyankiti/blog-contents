@@ -55,7 +55,7 @@ import { Bookmark } from "../../components/Bookmark";
 そもそもnpm workspaceとはという方は以下の記事がすごくわかりやすかったのでおすすめです。  
   
   
-<Bookmark href="https://zenn.dev/suin/scraps/20896e54419069" >
+<Bookmark href="https://zenn.dev/suin/scraps/20896e54419069" />
   
   
 ## やったこと   
@@ -226,5 +226,5 @@ Module not found: Can't resolve '@your-app/shared'
 全てのメソッドがshared/index.tsにまとまって一括でimportする構成はなんか微妙な気がする場合はexportを利用する手もあると思います。  
   
   
-<Bookmark href="https://zenn.dev/makotot/articles/5edb504ef7d2e6" >
+<Bookmark href="https://zenn.dev/makotot/articles/5edb504ef7d2e6" />
   

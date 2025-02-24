@@ -28,7 +28,7 @@ import { Bookmark } from "../../components/Bookmark";
 ### slideshare  
   
   
-<Bookmark href="https://www.slideshare.net/" >
+<Bookmark href="https://www.slideshare.net/" />
   
   
 Javaで検索した際の例:  
@@ -41,7 +41,7 @@ Javaで検索した際の例:
 ### **Speaker Deck**  
   
   
-<Bookmark href="https://speakerdeck.com/" >
+<Bookmark href="https://speakerdeck.com/" />
   
   
 Javaで検索した際の例:  
@@ -54,7 +54,7 @@ Javaで検索した際の例:
 ### **Docswell**  
   
   
-<Bookmark href="https://www.docswell.com/" >
+<Bookmark href="https://www.docswell.com/" />
   
   
 日本のエンジニア向けに開発されており、個人的にも最もUXが良いと感じている。カジュアルな内容から技術仕様の詳細解説まで存在する。  

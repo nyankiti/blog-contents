@@ -22,7 +22,7 @@ Apache Solrは全文検索ライブラリ Apache Licene(ルシーン)を用い�
 以下を参考にdockerを用いたstandaloneモードを動かしてみたのでその記録を紹介します。  
   
   
-<Bookmark href="https://solr.apache.org/guide/solr/latest/deployment-guide/solr-in-docker.html" >
+<Bookmark href="https://solr.apache.org/guide/solr/latest/deployment-guide/solr-in-docker.html" />
   
   
 利用したdocker-compose.yaml  

@@ -25,19 +25,19 @@ uv でモジュールをインストールした後、モジュールのパラ�
 Rust で書かれた非常に高速な Python パッケージおよびプロジェクトマネージャーです。  
   
   
-<Bookmark href="https://docs.astral.sh/uv/" >
+<Bookmark href="https://docs.astral.sh/uv/" />
   
   
 公式Doc以外にもuvについては話題になっていた以下の記事群を参照すると良いと思います。  
   
   
-<Bookmark href="https://roboin.io/article/2024/02/19/rust-based-python-package-manager-uv/" >
+<Bookmark href="https://roboin.io/article/2024/02/19/rust-based-python-package-manager-uv/" />
   
   
-<Bookmark href="https://gihyo.jp/article/2024/03/monthly-python-2403" >
+<Bookmark href="https://gihyo.jp/article/2024/03/monthly-python-2403" />
   
   
-<Bookmark href="https://qiita.com/kissy24/items/0c091bb5f12d697131ae" >
+<Bookmark href="https://qiita.com/kissy24/items/0c091bb5f12d697131ae" />
   
   
 ## プロジェクトへのuvの導入  
@@ -94,7 +94,7 @@ uvによって作成さらたpythonバイナリのパス（your/path/to/airflow/
 本格的にやりたい場合、以下のdevcontainerを用いた環境構築をするのが良さそう。  
   
     
-<Bookmark href="https://zenn.dev/dena/articles/python_env_with_uv" >
+<Bookmark href="https://zenn.dev/dena/articles/python_env_with_uv" />
   
   
 ## 【おまけ 】ruffを導入してコードフォーマットする  

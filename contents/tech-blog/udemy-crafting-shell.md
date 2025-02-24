@@ -25,7 +25,7 @@ import { Bookmark } from "../../components/Bookmark";
 > コマンドを実行する「シェル」を自作しながら、Linux のしくみや OS に近い領域のプログラミングを学ぼう！「シェルって何？コマンドの実行って何？標準入出力って何？ターミナルって何？」といった疑問をシェルの実装レベルで解消しよう！  
   
   
-<Bookmark href="https://www.udemy.com/course/crafting-shell" >
+<Bookmark href="https://www.udemy.com/course/crafting-shell" />
   
   
 ## 講座の感想  
