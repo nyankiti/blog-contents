@@ -39,7 +39,7 @@ Next.jsを用いたアプリケーションにログイン機能を実装する�
 また、以下のYahoo!デベロッパーネットワークから、先にアプリケーションを作成し、OAuth2.0 および OpenID Connect用のClinet IDを発行しておく必要があります。  
   
   
-<Bookmark href="https://developer.yahoo.co.jp/yconnect/v2/" >
+<Bookmark href="https://developer.yahoo.co.jp/yconnect/v2/" />
   
   
 こちらで発行したClinet ID, シークレットは実装で利用するのでメモっておいてください。  
