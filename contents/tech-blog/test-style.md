@@ -5,14 +5,14 @@ date: 2024-07-06T01:48:00.000Z
 slug: test-style
 tags: ["tech","poem"]
 excerpt: 要約要約
-updatedAt: 2025-02-24T13:11:33+09:00
+updatedAt: 2025-02-24T14:57:14+09:00
 isPublished: true
 isDeleted: false
 publishedAt: 2024-08-14T00:00:00.000+09:00
 views: 60
 ---
 import { Bookmark } from "../../components/Bookmark";
-
+import { TweetEmbed } from "../../components/TweetEmbed";
   
 # H1 heading  
   
@@ -81,8 +81,7 @@ const list = [a, b]
   
 Twitter Embedテスト  
   
-  
-[https://twitter.com/elonmusk/status/1834213015857889706](https://twitter.com/elonmusk/status/1834213015857889706)  
+<TweetEmbed href="https://twitter.com/elonmusk/status/1834213015857889706" />
   
   
 YouTube Embedテスト  

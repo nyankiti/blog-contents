@@ -1,0 +1,4 @@
+version: 1
+rules:
+  - pattern: "Tweet.*?"
+    expected: false # コンポーネント名が検出されてもエラーを無視

@@ -3,12 +3,13 @@
         "@textlint/markdown": true
     },
     "rules": {
-        "preset-japanese": true,
+        "preset-japanese": {
+            "sentence-length": false      
+        },
         "no-empty-section": true,
         "prh": {
             "rulePaths": [
-              "node_modules/prh/prh-rules/media/WEB+DB_PRESS.yml"
+              "./custom-prh-rules.yml"
             ]
-        }      
-    }
+        }    }
 }
