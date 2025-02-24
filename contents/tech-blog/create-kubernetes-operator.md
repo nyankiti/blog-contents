@@ -307,7 +307,7 @@ func main() {
 - [**OSC2020 Online Fukuoka Kubernetes Operator Intuition**](https://speakerdeck.com/nwiizo/osc2020-online-fukuoka-kubernetes-operator-intuition)  
 - 以下の動画は超絶おすすめです。本記事もこちらの動画の流れに沿った内容となっていますm  
   
-	<Bookmark href="https://www.udemy.com/course/kubernetes-operator-basics/" >
+	<Bookmark href="https://www.udemy.com/course/kubernetes-operator-basics/" />
   
   
 	repository: [https://github.com/nakamasato/kubernetes-operator-basics/tree/main](https://github.com/nakamasato/kubernetes-operator-basics/tree/main)  

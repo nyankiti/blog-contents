@@ -181,7 +181,7 @@ Solrでは大量の検索トラフィックや、ハードウェア障害など�
 ## 参考文献  
   
   
-<Bookmark href="https://gihyo.jp/book/2017/978-4-7741-8930-7" >
+<Bookmark href="https://gihyo.jp/book/2017/978-4-7741-8930-7" />
   
   
 ⚠️注意  
