@@ -15,7 +15,12 @@ export const Bookmark: React.FC<Props> = ({ href, siteUrl }) => {
   // metadataMapはMDXのスコープから注入される。
   const metadata = globalMetadataMap[url.toString()];
   if (!metadata) {
-    return <BookmarkError href={href} />;
+    // return <BookmarkError href={href} />;
+    return (
+      <a href={url.toString()} target="_blank" rel="noreferrer noopener">
+        {url.toString()}
+      </a>
+    );
   }
 
   return (
