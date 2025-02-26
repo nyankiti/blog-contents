@@ -8,6 +8,7 @@ publishedAt: 2025-02-26T19:44:36+09:00
 lastEditedAt: 2025-02-26T19:44:36+09:00
 views: 0
 ---
+import { Bookmark } from "../../components/Bookmark";
 
 本ブログで利用していた[contentlayer](https://github.com/contentlayerdev/contentlayer)がメンテナンスを停止したので、[mdx-bundler](https://github.com/kentcdodds/mdx-bundler)へ移行しました。
 
@@ -185,7 +186,7 @@ export function MDXComponent({ code }: { code: string }) {
 
 
 ## contentlayerから移行の際の注意点
-contentlayerの場合は、`.contentlayer`配下にmarkdownファイルの情報をまとめたjsonを作成し、ビルド製生物にバンドルしてしまうので、SSRの際にファイルシステムにアクセスせずとも記事情報を取得することで来ていました。
+contentlayerの場合は、`.contentlayer`配下にmarkdownファイルの情報をまとめたjsonを作成し、ビルド生成物としてバンドルしてしまうので、SSRの際にファイルシステムへアクセスせずとも記事情報を取得することで来ていました。
 
 mdx-bundlerのみで同じような機能を実装しようとすると、SSRの際にファイルアクセスしてエラーが出るので、SSGのみにしておくか、ビルド時にファイルを読み込むようにしておく必要があるということです。
 
