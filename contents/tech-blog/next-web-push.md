@@ -24,7 +24,7 @@ Push通知を実現するための技術である、サービスワーカーと�
   
 実装の大部分は以下のNext.jsの公式ドキュメントに基づいています。  
   
-<BookMark href="https://nextjs.org/docs/app/building-your-application/configuring/progressive-web-apps" />
+<Bookmark href="https://nextjs.org/docs/app/building-your-application/configuring/progressive-web-apps" />
   
 # ブラウザのサービスワーカーとは  
   
@@ -34,7 +34,7 @@ Push通知を実現するための技術である、サービスワーカーと�
   
 以下の記事がとても参考になる。  
   
-<BookMark href="https://zenn.dev/s_takashi/articles/b01980461f3b21" />
+<Bookmark href="https://zenn.dev/s_takashi/articles/b01980461f3b21" />
   
   
 以下は明示的にサービスワーカースクリプトをブラウザにダウロードさせる例。  
@@ -53,7 +53,7 @@ const registration = await navigator.serviceWorker.register('/sw.js', {
 サービスワーカーはブラウザの実行環境と異なり、以下のapiが利用できるらしい。ページ読み込み前から動いてくれるスクリプトなので当然だが、DOMにアクセスできなかったり、windowオブジェクトなどは利用できないので注意が必要。  
   
   
-<BookMark href="https://developer.mozilla.org/ja/docs/Web/API/Service_Worker_API" />
+<Bookmark href="https://developer.mozilla.org/ja/docs/Web/API/Service_Worker_API" />
   
 以下のchromeのservice worker設定画面（**chrome://serviceworker-internals/**）から確認、unregisterすることができる  
   
@@ -113,7 +113,7 @@ pushイベントをevent listenerを作成し、通知を作成する [showNotif
 registerメソッドの返り値は以下のServiceWorkerRegistrationを返す。  
   
   
-<BookMark href="https://developer.mozilla.org/ja/docs/Web/API/ServiceWorkerRegistration" />
+<Bookmark href="https://developer.mozilla.org/ja/docs/Web/API/ServiceWorkerRegistration" />
   
   
 こちらのServiceWorkerRegistrationからプッシュ通知の許可状況へのアクセスなど、プッシュ通知の購読を管理するための [`PushManager`](https://developer.mozilla.org/ja/docs/Web/API/PushManager) へアクセスすることができる。こちらの PushManagerから取得できる [`PushSubscription`](https://developer.mozilla.org/ja/docs/Web/API/PushSubscription) インスタンスはプッシュ通知を送る際に利用するのでstateに格納しておく。  
@@ -161,7 +161,7 @@ registerメソッドの返り値は以下のServiceWorkerRegistrationを返す�
 通知権限の状態については以下をの公式Docを参考に実装しました。  
   
   
-<BookMark href="https://developer.mozilla.org/ja/docs/Web/API/Notification/requestPermission_static" />
+<Bookmark href="https://developer.mozilla.org/ja/docs/Web/API/Notification/requestPermission_static" />
   
   
 また、参考までに ーカルでで動作確認する場合はhttpsである必要があるので、 `next dev --experimental-https` を利用する必要があます。  
@@ -176,7 +176,7 @@ registerメソッドの返り値は以下のServiceWorkerRegistrationを返す�
 web-push 送信部分の詳細は以下のREADME.meなどを参照ください。 [VAPID](https://vapidkeys.com/) などを事前に登録しておく必要があります。  
   
   
-<BookMark href="https://www.npmjs.com/package/web-push" />
+<Bookmark href="https://www.npmjs.com/package/web-push" />
   
   
 ```javascript  
@@ -247,20 +247,20 @@ Next.js においては、[manifest](https://nextjs.org/docs/app/api-reference/f
 実際にプロダクトに導入してリターンが見込めるかはしっかり検討が必要な段階ということです。  
   
   
-<BookMark href="https://www.ipa.go.jp/security/anshin/attention/2021/mgdayori20210309.html" />
+<Bookmark href="https://www.ipa.go.jp/security/anshin/attention/2021/mgdayori20210309.html" />
   
   
 しかし、技術としてはとても素敵だなと思いますし、日々進化していると実感しています。最後にPWAを導入する際に参考になりそうなサイトを置いておきます。  
   
 - 現在PWAができることは以下サイトにまとめられている  
   
-  <BookMark href="https://whatpwacando.today/" />
+  <Bookmark href="https://whatpwacando.today/" />
   
 - Next.jsの公式ドキュメントにて言及されている [serwist](https://github.com/serwist/serwist) を利用したPWAを作成しているブログ  
   
-  <BookMark href="https://javascript.plainenglish.io/building-a-progressive-web-app-pwa-in-next-js-with-serwist-next-pwa-successor-94e05cb418d7" />
+  <Bookmark href="https://javascript.plainenglish.io/building-a-progressive-web-app-pwa-in-next-js-with-serwist-next-pwa-successor-94e05cb418d7" />
   
 - serwistのフォーク元であるworkboxを利用している以下の一休.comの事例  
   
-  <BookMark href="https://user-first.ikyu.co.jp/entry/2019/12/02/080000" />
+  <Bookmark href="https://user-first.ikyu.co.jp/entry/2019/12/02/080000" />
   
