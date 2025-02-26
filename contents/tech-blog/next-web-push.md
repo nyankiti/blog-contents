@@ -11,7 +11,7 @@ isDeleted: false
 publishedAt: 2024-09-25
 views: 440
 ---
-
+import { Bookmark } from "../../components/Bookmark";
   
 # はじめに  
 
