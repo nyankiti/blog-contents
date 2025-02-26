@@ -1,6 +1,6 @@
 ---
 title: "Next.jsとmarkdownのブログでcontentlayerからmdx-bundlerに移行した話"
-slug: "2025-02-26-next-mdx-bundler-blog.md"
+slug: "2025-02-26-next-mdx-bundler-blog"
 tags: ['tech','next']
 published: true
 deleted: false
@@ -9,15 +9,13 @@ lastEditedAt: 2025-02-26T19:44:36+09:00
 views: 0
 ---
 
-[contentlayer](https://github.com/contentlayerdev/contentlayer)がメンテナンスを停止したので、[mdx-bundler](https://github.com/kentcdodds/mdx-bundler)を用いて本ブログを作りかえることにしました。
+本ブログで利用していた[contentlayer](https://github.com/contentlayerdev/contentlayer)がメンテナンスを停止したので、[mdx-bundler](https://github.com/kentcdodds/mdx-bundler)へ移行しました。
 
-現状記事管理はmarkdownファイルのみでmdxを使っているわけではないのですが、これを機にmdx対応して表現の幅を増せたら嬉しいなと思い、mdx-bundlerを選定しました。
+現状の記事管理ではmdxを使っているわけではないのですが、これを機に表現の幅を増せたら嬉しいなと思い mdx-bundler を選定しました。
 
-markdownファイルのみで記事管理しているためNext.js公式にあるmdxの利用方法はあまり参考にならず、自前でゴリゴリ実装する羽目になりましたがなんとか実現できたのでその記録を残します。
+markdownファイルのみで記事管理しているため、[Next.js公式にあるmdxの利用方法](https://nextjs.org/docs/pages/building-your-application/configuring/mdx)はあまり参考にならず、自前でゴリゴリ実装する羽目になりましたがなんとか実現できたのでその記録を残します。
 
-https://nextjs.org/docs/pages/building-your-application/configuring/mdx
-
-[contentlayerから移行の際の注意点](# contentlayerから移行の際の注意点) にあるように、contentlayerっぽい作りをそのまま利用することはできないといのでこれから実施する人は注意してください。
+[contentlayerから移行の際の注意点](#contentlayerから移行の際の注意点) にあるように、contentlayerっぽい作りをそのまま利用することはできないといのでこれから実施する人は注意してください。
 
 
 ## 実装紹介
@@ -103,7 +101,7 @@ export const loadMDX = async (fileContent: string) => {
 
 ```
 
-## 記事詳細ページ
+### 記事詳細ページ
 app/blog/[slug]/page.tsx
 ```tsx
 export const dynamic = "error";
@@ -205,7 +203,7 @@ https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
 
 
 ## `@next/mdx`を利用しなかった理由
-ブログ記事を別のmarkdownのみのリポジトリで管理したかったからです。
+ブログ記事を別のmarkdownのみのリポジトリで管理していたからです。
 `@next/mdx`の場合、Next.jsのお作法に従って mdxファイルをappフォルダ配下に配置する必要があり、ブログ記事管理とフロントエンドの実装が疎結合になるのが気に入りませんでした。
 
 参考: https://nextjs.org/docs/pages/building-your-application/configuring/mdx
@@ -220,13 +218,16 @@ mdx-bundlerでは以下のようにわかりやすい感じでmarkdownにBookmar
 ```
 import { Bookmark } from "../../components/Bookmark";
 
-...
-
-以下はブックマーク  
-    
 <Bookmark href="https://sokes-nook.net/blog/next-web-push" siteUrl="https://sokes-nook.net" />
 ```
+表示結果↓
+<Bookmark href="https://sokes-nook.net/blog/next-web-push" siteUrl="https://sokes-nook.net" />
 
-![alt text](<images/2025-02-26-next-mdx-bundler-blog/スクリーンショット 2025-02-26 20.33.22.png>)
 
-contentlayerとmdx-bundlerは同じ役割ではないので、移行とか言うなと注意されそうなので補足しておくと、contentlayerの際のレンダリングにはreact-markdwonを利用していました。
+mdxに移行する以前は、Bookmark(Linkcard)を表示するために以下のようななんちゃってのunifiedプラグインを作って頑張っていましたが、とてもシンプルになってとてもほっこりです。
+
+<Bookmark href="https://sokes-nook.net/blog/unified-notion-bookmark" siteUrl="https://sokes-nook.net" />
+
+
+
+contentlayerとmdx-bundlerは同じ役割ではないので、厳密には移行とは言えないと注意されそうなので補足しておくと、contentlayer利用時のレンダリングには[react-markdwon](https://github.com/remarkjs/react-markdown)を利用していました。

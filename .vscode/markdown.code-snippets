@@ -4,7 +4,7 @@
         "body": [
             "---",
             "title: \"\"",
-            "slug: \"${TM_FILENAME}\"",
+            "slug: \"${TM_FILENAME_BASE}\"",
             "tags: ['tech','poem']",
             "published: false",
             "deleted: false",

@@ -4,8 +4,7 @@ title: unifiedを理解してnotion-to-mdのBookmarkをAST上から扱う
 date: 2024-09-07T02:17:00.000Z
 slug: unified-notion-bookmark
 tags: ["tech"]
-excerpt: undefined
-updatedAt: 2024-09-25T15:45:00.000Z
+updatedAt: 2025-02-26T21:17:01+09:00
 isPublished: true
 isDeleted: false
 publishedAt: 2024-09-14
@@ -15,15 +14,26 @@ views: 56
   
 ## はじめに  
   
+本ブログは2024/09/14現在では、Next.js, contentlayer, markdownを用いて構築しています。
+記事はnotionで書いたものをnotion apiを定期実行で叩くことでmarkdownとして取得し保存しています。  
   
-本ブログの記事一覧はmarkdown形式で管理しています。  
+notion apiからページ内容を取得しMarkdownに変換する処理は [notion-to-md](https://github.com/souvikinator/notion-to-md) を用いて行なっています。  
+
+こちらライブラリでは、notionのBookmarkを以下のようなmdに変換します。  
   
-  
-そのmarkdownを自分の思った通りに描画しようとした場合、[unified](https://github.com/unifiedjs/unified)というエコシステムを利用することが不可避でした。  
-  
+```markdown  
+[bookmark](https://zenn.dev/januswel/articles/e4f979b875298e372070)   
+```  
+
+デフォルトのmarkdownレンダラーを利用する場合、リンクテキストが”bookmark”のリンクとして解釈されてしまいます。  
+
+こちらのbookmarkを独自に解釈してブックマークとして表示する unifiedプラグインを作成したので紹介します。  
+
+
+## unifiedについて
+markdownを自分の思った通りに描画しようとした場合、[unified](https://github.com/unifiedjs/unified)というエコシステムを利用することが不可避でした。  
   
 unified では mdast（Markdown の AST）を構築し、hast （HTML の AST）に変換して、htmlを出力するという手順で動いており、ASTの扱いを把握する必要がありました。  
-  
   
 unifiedの理解については [@janus_wel](https://x.com/janus_wel)さんのzennにおける以下連載がとても参考になりました。  
   
@@ -34,32 +44,9 @@ unifiedの理解については [@janus_wel](https://x.com/janus_wel)さんのze
   
 こちらで解説されている内容は前提として本編が構成されているため、前もっての一読をお勧めします。  
   
-  
 また、qiitaの以下記事もわかりやすかったのでお勧めです。  
   
-  
 [**Next.js のための Remark / Rehype 入門**](https://qiita.com/sankentou/items/f8eadb5722f3b39bbbf8)  
-  
-  
-## [notion-to-md](https://github.com/souvikinator/notion-to-md)で生成されるMarkdownのBookmarkについて  
-  
-  
-notion apiからnotionページを取得しMarkdownに変換する処理は [notion-to-md](https://github.com/souvikinator/notion-to-md) を用いて行なっています。  
-  
-  
-こちらライブラリでは、notionのBookmarkを以下のようなmdに変換します。  
-  
-  
-```markdown  
-[bookmark](https://zenn.dev/januswel/articles/e4f979b875298e372070)   
-```  
-  
-  
-デフォルトのmd rendererを利用する場合、リンクテキストが”bookmark”のリンクとして解釈されてしまいます。  
-  
-  
-こちらのbookmarkを独自に解釈してブックマークとして表示する unifiedプラグインを作成したので紹介します。  
-  
   
 ## 実装  
   
