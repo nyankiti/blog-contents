@@ -6,10 +6,10 @@
             "title: \"\"",
             "slug: \"${TM_FILENAME_BASE}\"",
             "tags: ['tech','poem']",
-            "published: false",
-            "deleted: false",
+            "isPublished: false",
+            "isDeleted: false",
             "publishedAt: ${CURRENT_YEAR}-$CURRENT_MONTH-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+09:00",
-            "lastEditedAt: ${CURRENT_YEAR}-$CURRENT_MONTH-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+09:00",
+            "updatedAt: ${CURRENT_YEAR}-$CURRENT_MONTH-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+09:00",
             "views: 0",
             "---"
         ]
