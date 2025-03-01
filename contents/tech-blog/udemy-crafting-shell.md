@@ -3,7 +3,10 @@ id: 93c07d99-b6cc-42c1-97c6-e20f8ba7503b
 title: Pythonによる自作シェル講座の感想
 date: 2024-08-25T04:40:00.000Z
 slug: udemy-crafting-shell
-tags: ["tech"]
+tags: 
+  - tech
+  - udemy
+  - shell
 excerpt: undefined
 updatedAt: 2024-09-14T04:56:00.000Z
 isPublished: true

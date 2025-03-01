@@ -3,8 +3,9 @@ id: e0e37e70-9a4a-40ce-b36e-492d722330f4
 title: ブログ表示テスト用
 date: 2024-07-06T01:48:00.000Z
 slug: test-style
-tags: ["tech","poem"]
-excerpt: 要約要約
+tags: 
+  - tech
+  - poem
 updatedAt: 2025-02-24T21:43:23+09:00
 isPublished: true
 isDeleted: false

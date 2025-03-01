@@ -3,7 +3,10 @@ id: 110cef7c-d8db-8072-b929-d4a745ca745b
 title: NextAuthでYahoo!JapanIDでログインするためのカスタムプロバイダーを作成する
 date: 2024-09-29T11:59:00.000Z
 slug: nextauth-yahoojapanid
-tags: ["tech","auth"]
+tags: 
+  - tech
+  - auth
+  - OIDC
 excerpt: undefined
 updatedAt: 2024-09-29T13:30:00.000Z
 isPublished: true
@@ -16,7 +19,7 @@ import { Bookmark } from "../../components/Bookmark";
 ## はじめに  
   
   
-Next.jsを用いたアプリケーションにログイン機能を実装する際、[NextAuth.](https://next-auth.js.org/)を利用することが多いと思います。メールアドレスでログインだったり、Googleでログインする方法については、たくさんの実装例や記事があると思います。参考になりそうな実装例を以下に置いておきます。  
+Next.jsを用いたアプリケーションにログイン機能を実装する際、[NextAuth](https://next-auth.js.org/)を利用することが多いと思います。メールアドレスでログインだったり、Googleでログインする方法については、たくさんの実装例や記事があると思います。参考になりそうな実装例を以下に置いておきます。  
   
 - 公式の実装例: [https://github.com/nextauthjs/next-auth-example](https://github.com/nextauthjs/next-auth-example)  
 - 記事: [https://zenn.dev/tfutada/articles/5557b780050574](https://zenn.dev/tfutada/articles/5557b780050574)  

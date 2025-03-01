@@ -1,7 +1,14 @@
 ---
 title: "dotfilesを整理した in 2025【mise, sheldon, raycastなど】"
 slug: "2025-03-01-my-dotfiles"
-tags: ['tech', 'dotfiles']
+tags: 
+  - tech
+  - dotfiles
+  - mise
+  - sheldon
+  - raycast
+  - fzf
+  - shell
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-01T11:31:36+09:00
