@@ -6,7 +6,7 @@ isPublished: true
 isDeleted: false
 publishedAt: 2025-02-26T19:44:36+09:00
 updatedAt: 2025-02-28T23:05:18+09:00
-views: 0
+views: 1
 ---
 import { Bookmark } from "../../components/Bookmark";
 
