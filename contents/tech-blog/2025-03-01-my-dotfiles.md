@@ -1,5 +1,5 @@
 ---
-title: "dotfilesを整理した in 2025【mise, sheldon, raycastなど】"
+title: "dotfilesの育成 in 2025【mise, sheldon, raycastなど】"
 slug: "2025-03-01-my-dotfiles"
 tags: 
   - tech

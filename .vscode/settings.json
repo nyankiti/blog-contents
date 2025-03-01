@@ -2,7 +2,7 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "lpubsppop01.autoTimeStamp.filenamePattern": ".md",
-  "lpubsppop01.autoTimeStamp.lineLimit": 10,
+  "lpubsppop01.autoTimeStamp.lineLimit": 20,
   "lpubsppop01.autoTimeStamp.modifiedTimeStart": "^updatedAt: ",
   "lpubsppop01.autoTimeStamp.momentFormat": "YYYY-MM-DDTHH:mm:ss+09:00",
   "vsnotes.defaultNotePath": "~/src/blog-contents/contents",
