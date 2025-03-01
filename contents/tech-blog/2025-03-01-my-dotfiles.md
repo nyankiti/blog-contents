@@ -2,10 +2,10 @@
 title: "dotfilesを整理した in 2025【mise, sheldon, raycastなど】"
 slug: "2025-03-01-my-dotfiles"
 tags: ['tech', 'dotfiles']
-isPublished: false
+isPublished: true
 isDeleted: false
 publishedAt: 2025-03-01T11:31:36+09:00
-updatedAt: 2025-03-01T23:39:24+09:00
+updatedAt: 2025-03-01T23:49:21+09:00
 views: 0
 ---
 import { Bookmark } from "../../components/Bookmark";
@@ -13,16 +13,16 @@ import { Bookmark } from "../../components/Bookmark";
 ## はじめに
 PCをリプレイス機会があったのでdotfilesを整理しました。
 
-ある程度調査をして、自分が使いこなせる範囲の最低限整えるためのdotfilesといった感じです。
+ある程度調査をして、自分が使いこなせる範囲の最低限整えるためのdotfilesといった感じです。  
 「rust製のツールで揃えてとにかく早い環境を作る」みたいないなこだわりも特にありません。
 
-リポジトリは以下になります。
+リポジトリは以下になります。  
 https://github.com/nyankiti/dotfiles
 
 ## 2023時点からの変化
-### mise利用に変更
+### mise
 あらゆる言語を管理できるツールを利用たことがなかったのでこれを機に入門しました。
-グローバルに用いる実行環境については全てmiseへ集約できるようにしました。
+グローバルに用いる実行環境については全て[mise](https://github.com/jdx/mise)へ集約できるようにしました。
 
 それぞれの言語で個別でPATHを通していたものが以下で集約され、.zshrcがとてもすっきりしました。
 ```
@@ -83,11 +83,11 @@ zle -N history_search_with_fzf
 bindkey '^R' history_search_with_fzf
 ```
 
-利用例
+利用例↓
 ![alt text](<images/2025-03-01-my-dotfiles/スクリーンショット 2025-03-01 22.09.22.png>)
 
-### github関連の設定の管理開始
-.gitconfigで以下の設定を追加
+### .gitconfig
+.gitconfigによる以下の設定をdotfilesに追加。`git pull`した時の merge strategyの指定がないぞと言われるあのワーニングへの対策です
 ```
 [include]
   path = ~/dotfiles/git/user.conf
@@ -107,7 +107,6 @@ bindkey '^R' history_search_with_fzf
     autoSetupRemote = true
 [merge]
   ff = false
-
 ```
 
 ## GitHub Actionsで再現性の担保
@@ -133,8 +132,8 @@ jobs:
 ```
 
 ## 最後に
-mise, sheldon, fzfは初めて触ることもあり、結局1日くらい格闘していました。
-Cursor, Warp等の生成AI周りのツールの環境整備もやりたかったのですが、今回は定番どころを押さえていくだけで時間がすごいかかったのでまた別の機会にしたいと思います。
+mise, sheldon, fzfは初めて触ることもあり、結局1日くらい格闘していました。  
+Cursor, Warp等の生成AI周りのツールの環境整備もdotfilesに落とし込みたかったのですが、今回は定番どころを押さえていくだけで時間がすごいかかったのでまた別の機会にしたいと思います。
 
 今回メインで参考にさせていただいた記事です🙏
 - [2024年度 わたしのdotfilesを紹介します](https://zenn.dev/smartcamp/articles/f20a72910bde40)

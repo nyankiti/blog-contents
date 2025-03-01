@@ -5,7 +5,7 @@ date: 2024-10-06T11:48:00.000Z
 slug: ir-system-book
 tags: ["bookreview","tech"]
 excerpt: undefined
-updatedAt: 2024-10-09T10:26:00.000Z
+updatedAt: 2025-03-01T23:40:56+09:00
 isPublished: true
 isDeleted: false
 publishedAt: 2024-10-06
@@ -20,10 +20,8 @@ import { Bookmark } from "../../components/Bookmark";
   
   
 今回は、『検索システム ― 実務者のための開発改善ガイドブック』を読み、その内容をまとめ、私が感じたことを共有したいと思います。本書は実務に即したアプローチで、検索システムの設計や改善方法について解説しており、開発者目線でとても有益な内容が詰まっています。  
-  
 
-<Bookmark href="https://www.lambdanote.com/products/ir-system" />
-  
+<Bookmark href="https://amzn.to/4gXQrfD" />
   
 # 読書時のメモ  
   
