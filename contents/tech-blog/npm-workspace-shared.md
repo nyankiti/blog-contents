@@ -19,7 +19,7 @@ import { Bookmark } from "../../components/Bookmark";
 以下のような構成でモノレポではあるものの、それぞれ独立したnodeプロジェクトで運用していた状態から、npm workspaceを用いて共通処理置き場(sharedプロジェクト)を作成したのでその方法を紹介します。  
   
   
-```sql  
+```text
 .  
 ├── backend  
 │   ├── package.json  
@@ -37,7 +37,7 @@ import { Bookmark } from "../../components/Bookmark";
 **workspace移行後のプロジェクト構成**   
   
   
-```sql  
+```text
 .  
 ├── backend  
 │   └── package.json  
@@ -208,7 +208,7 @@ import { getDateStringBeforeN } from "@your-app/shared";
 元々存在していたnode_moduleとpackage-lock.jsonを手動で削除してからルートにて `npm install` を実行する必要があります。これを実施しないと以下のようなエラーで共通処理を正しくimportできないと思います。  
   
   
-```sql  
+```text
 Module not found: Can't resolve '@your-app/shared'  
 ```  
   
