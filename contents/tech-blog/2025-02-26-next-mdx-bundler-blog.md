@@ -10,11 +10,13 @@ views: 1
 ---
 import { Bookmark } from "../../components/Bookmark";
 
+## はじめに
+
 本ブログで利用していた[contentlayer](https://github.com/contentlayerdev/contentlayer)がメンテナンスを停止したので、[mdx-bundler](https://github.com/kentcdodds/mdx-bundler)へ移行しました。
 
-現状の記事管理ではmdxを使っているわけではないのですが、これを機に表現の幅を増せたら嬉しいなと思い mdx-bundler を選定しました。
+現状の記事管理ではmdxを使っているわけではないのですが、これを機に表現の幅を広げられたら嬉しいなと思い mdx-bundler を選定しました。
 
-markdownファイルのみで記事管理しているため、[Next.js公式にあるmdxの利用方法](https://nextjs.org/docs/pages/building-your-application/configuring/mdx)はあまり参考にならず、自前でゴリゴリ実装する羽目になりましたがなんとか実現できたのでその記録を残します。
+appディレクトリ配下ではない場所でmarkdownファイルを管理しているため、[Next.js公式にあるmdxの利用方法](https://nextjs.org/docs/pages/building-your-application/configuring/mdx)はあまり参考にならず、自前でゴリゴリ実装する羽目になりましたがなんとか実現できたのでその記録を残します。
 
 [contentlayerから移行の際の注意点](#contentlayerから移行の際の注意点) にあるように、contentlayerっぽい作りをそのまま利用することはできないといのでこれから実施する人は注意してください。
 
