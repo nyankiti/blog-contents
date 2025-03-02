@@ -18,7 +18,7 @@ jobs:
           node-version: 20
           cache: "npm"
       - name: build application
-        run: npm ci
+        run: npm install
       - name: run update views
         env:
           GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
