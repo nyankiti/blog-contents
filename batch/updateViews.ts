@@ -1,6 +1,6 @@
 import * as core from "@actions/core";
 import { GaApiClient } from "./libs/ga-client";
-import { writeFile, readFile } from "fs/promises";
+import { writeFile, readFile } from "node:fs/promises";
 
 export async function run() {
   const gaApiClient = new GaApiClient();

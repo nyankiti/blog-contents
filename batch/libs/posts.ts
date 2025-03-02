@@ -17,6 +17,7 @@ export async function readFileFromMdorMds(
     try {
       fileContent = await readFile(filepath, "utf-8");
       usedExt = ext;
+      console.log(`usedExt: ${usedExt}`);
       break;
     } catch {
       continue;
@@ -33,9 +34,10 @@ export async function readFileFromMdorMds(
 export const getSlugs = async (baseDir: string): Promise<string[]> => {
   const postDirPath = path.join(baseDir, "./contents/tech-blog");
   const postFiles = await readdir(postDirPath);
+
   return postFiles
     .map((file) => {
-      if (path.extname(file) === "md" || path.extname(file) === "mdx") {
+      if (path.extname(file) === ".md" || path.extname(file) === ".mdx") {
         const slug = path.basename(file, path.extname(file));
         return slug;
       }
