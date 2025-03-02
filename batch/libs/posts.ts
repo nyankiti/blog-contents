@@ -17,7 +17,6 @@ export async function readFileFromMdorMds(
     try {
       fileContent = await readFile(filepath, "utf-8");
       usedExt = ext;
-      console.log(`usedExt: ${usedExt}`);
       break;
     } catch {
       continue;
