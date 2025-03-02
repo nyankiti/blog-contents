@@ -2,8 +2,8 @@ import matter from "gray-matter";
 import { getSlugs, readFileFromMdorMds } from "./libs/posts";
 import path from "node:path";
 import { writeFile } from "node:fs/promises";
-import { remark } from "remark";
 import strip from "strip-markdown";
+import { remark } from "remark";
 
 export type PostDocument = {
   slug: string;
@@ -36,9 +36,11 @@ const tokenizeJapanese = (text: string): string => {
 };
 
 export const generateSearchIndex = async () => {
-  const baseDir = process.env.GITHUB_WORKSPACE
-    ? process.env.GITHUB_WORKSPACE
-    : "/home/runner/work/blog-contents";
+  // const baseDir = process.env.GITHUB_WORKSPACE
+  //   ? process.env.GITHUB_WORKSPACE
+  //   : "/home/runner/work/blog-contents";
+
+  const baseDir = path.join(process.cwd());
 
   const slugs = await getSlugs(baseDir);
   const searchIndex: PostDocument[] = [];

@@ -3,26 +3,18 @@
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
+    "module": "CommonJS",
     "rootDir": "./",
     "baseUrl": "./",
     "sourceMap": true,
     "outDir": "./dist",
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
     "newLine": "lf",
-    "jsx": "preserve",
-    "incremental": true
+    "jsx": "preserve"
   },
-  "exclude": ["./dist", "./node_modules"],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
-  }
+  "exclude": ["./dist", "./node_modules"]
 }
