@@ -3,8 +3,8 @@
         "prefix": "vsnote_template_tech_blog",
         "body": [
             "---",
-            "title: \"\"",
-            "slug: \"${TM_FILENAME_BASE}\"",
+            "title:",
+            "slug: ${TM_FILENAME_BASE}",
             "tags:",
             "  - tech",
             "isPublished: false",
