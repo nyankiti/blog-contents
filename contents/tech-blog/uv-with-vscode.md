@@ -4,16 +4,16 @@ title: Pythonプロジェクトにuvを導入 with VSCode
 date: 2024-12-26T10:38:00.000Z
 slug: uv-with-vscode
 tags: 
-  - tech
-  - python
-  - uv
-  - VSCode
+  - tech: undefined
+  - python: undefined
+  - uv: undefined
+  - VSCode: undefined
 excerpt: undefined
 updatedAt: 2024-12-31T02:10:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-12-26
-views: 434
+views: 438
 ---
 import { Bookmark } from "../../components/Bookmark";
   

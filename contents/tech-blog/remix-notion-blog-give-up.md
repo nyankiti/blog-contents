@@ -4,15 +4,15 @@ title: remix と notion apiでブログを構築しようとしたが断念し�
 date: 2024-09-01T13:46:00.000Z
 slug: remix-notion-blog-give-up
 tags: 
-  - tech
-  - remix
-  - notion
+  - tech: undefined
+  - remix: undefined
+  - notion: undefined
 excerpt: undefined
 updatedAt: 2024-09-07T12:37:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-08-31
-views: 89
+views: 90
 ---
 
   

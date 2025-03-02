@@ -4,15 +4,15 @@ title: npm workspaceを用いて共通処理をpackageとして切り出す
 date: 2025-02-08T03:37:00.000Z
 slug: npm-workspace-shared
 tags: 
-  - tech
-  - next
-  - npm
+  - tech: undefined
+  - next: undefined
+  - npm: undefined
 excerpt: undefined
 updatedAt: 2025-02-08T07:28:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2025-02-08
-views: 94
+views: 95
 ---
 import { Bookmark } from "../../components/Bookmark";
   

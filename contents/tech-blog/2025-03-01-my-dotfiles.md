@@ -2,18 +2,18 @@
 title: "dotfilesの育成 in 2025【mise, sheldon, raycastなど】"
 slug: "2025-03-01-my-dotfiles"
 tags: 
-  - tech
-  - dotfiles
-  - mise
-  - sheldon
-  - raycast
-  - fzf
-  - shell
+  - tech: undefined
+  - dotfiles: undefined
+  - mise: undefined
+  - sheldon: undefined
+  - raycast: undefined
+  - fzf: undefined
+  - shell: undefined
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-01T11:31:36+09:00
 updatedAt: 2025-03-01T23:49:21+09:00
-views: 0
+views: 9
 ---
 import { Bookmark } from "../../components/Bookmark";
 

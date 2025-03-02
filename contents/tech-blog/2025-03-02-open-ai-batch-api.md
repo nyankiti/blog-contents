@@ -2,15 +2,15 @@
 title: "Open AIのBatch APIを利用してembeddingを50%割引で実施する【node.js】"
 slug: "2025-03-02-open-ai-batch-api"
 tags: 
-  - tech
-  - node.js
-  - openai
-  - prisma
+  - tech: undefined
+  - node.js: undefined
+  - openai: undefined
+  - prisma: undefined
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-02T03:36:53+09:00
 updatedAt: 2025-03-02T03:47:00+09:00
-views: 0
+views: 1
 ---
 import { Bookmark } from "../../components/Bookmark";
 
