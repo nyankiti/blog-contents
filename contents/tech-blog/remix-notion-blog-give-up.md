@@ -3,16 +3,16 @@ id: 9852dfa0-a0e5-4aaf-8f03-403e995857f7
 title: remix と notion apiでブログを構築しようとしたが断念した話
 date: 2024-09-01T13:46:00.000Z
 slug: remix-notion-blog-give-up
-tags:
-  - tech
-  - remix
-  - notion
+tags:: undefined
+  - tech: undefined
+  - remix: undefined
+  - notion: undefined
 excerpt: undefined
 updatedAt: 2024-09-07T12:37:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-08-31
-views: 90
+views: 91
 ---
 
   
