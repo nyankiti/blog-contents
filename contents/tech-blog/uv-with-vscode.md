@@ -3,12 +3,11 @@ id: 168cef7c-d8db-80e7-8547-c6c61c770b5d
 title: Pythonプロジェクトにuvを導入 with VSCode
 date: 2024-12-26T10:38:00.000Z
 slug: uv-with-vscode
-tags:: undefined
-  - tech: undefined
-  - python: undefined
-  - uv: undefined
-  - VSCode: undefined
-excerpt: undefined
+tags:
+  - tech
+  - python
+  - uv
+  - VSCode
 updatedAt: 2024-12-31T02:10:00.000Z
 isPublished: true
 isDeleted: false
