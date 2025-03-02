@@ -3,7 +3,7 @@ id: 11acef7c-d8db-80f4-949d-d0ef5d332ff8
 title: standaloneモードのApache SolrをDockerで動かしてみる
 date: 2024-10-09T10:25:00.000Z
 slug: standalone-apache-solr-docker
-tags: 
+tags:
   - tech
   - solr
 excerpt: undefined

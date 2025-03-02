@@ -3,7 +3,8 @@ id: 12ccef7c-d8db-8023-b570-c605141a163f
 title: スライド徘徊のすすめ
 date: 2024-10-27T09:31:00.000Z
 slug: slides-browsing
-tags: ["poem"]
+tags:
+  - poem
 excerpt: undefined
 updatedAt: 2024-11-04T14:17:00.000Z
 isPublished: true

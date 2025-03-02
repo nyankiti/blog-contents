@@ -3,7 +3,10 @@ id: 1208245f-354b-4539-baf0-db6ce95047bb
 title: ほぼ無料で構築した個人ブログで1円稼ぐことに成功したのでやったことをまとめる
 date: 2024-09-11T03:52:00.000Z
 slug: next-blog-summary
-tags: ["poem","tech","next"]
+tags:
+  - poem
+  - tech
+  - next
 excerpt: undefined
 updatedAt: 2024-12-03T13:57:00.000Z
 isPublished: true

@@ -3,7 +3,7 @@ id: 178cef7c-d8db-8050-a8a8-c76ff712eed5
 title: uvでプロジェクト管理しているPythonスクリプトをgithub actionsで実行する
 date: 2025-01-11T01:24:00.000Z
 slug: exec-py-by-uv-on-github-actions
-tags: 
+tags:
   - tech
   - python
   - uv

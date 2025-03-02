@@ -3,7 +3,7 @@ id: b56f3e8d-bb5f-4207-b1ef-973626d8c3e6
 title: unifiedを理解してnotion-to-mdのBookmarkをAST上から扱う
 date: 2024-09-07T02:17:00.000Z
 slug: unified-notion-bookmark
-tags: 
+tags:
   - tech
   - markdown
   - unified

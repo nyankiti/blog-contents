@@ -5,7 +5,7 @@
             "---",
             "title: \"\"",
             "slug: \"${TM_FILENAME_BASE}\"",
-            "tags: ",
+            "tags:",
             "  - tech",
             "isPublished: false",
             "isDeleted: false",

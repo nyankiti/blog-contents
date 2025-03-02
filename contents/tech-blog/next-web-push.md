@@ -3,7 +3,7 @@ id: 44088e43-bcfb-4023-a0a1-53a286501522
 title: Next.jsでブラウザ通知を試してみる
 date: 2024-09-11T03:41:00.000Z
 slug: next-web-push
-tags: 
+tags:
   - tech
   - next
   - PWA

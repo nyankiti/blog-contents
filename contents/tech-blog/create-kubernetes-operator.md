@@ -3,7 +3,7 @@ id: 15ccef7c-d8db-804b-9fb7-ca74fc0700d1
 title: k8s入門者が超シンプルなKubernetes Operatorを作ってk8sの理解を深める
 date: 2024-12-14T02:59:00.000Z
 slug: create-kubernetes-operator
-tags: 
+tags:
   - kubernetes
   - tech
 excerpt: undefined

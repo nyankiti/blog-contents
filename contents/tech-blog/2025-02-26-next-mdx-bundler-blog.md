@@ -1,12 +1,12 @@
 ---
 title: "Next.jsとmarkdownのブログでcontentlayerからmdx-bundlerに移行した話"
 slug: "2025-02-26-next-mdx-bundler-blog"
-tags: 
-  - tech: undefined
-  - next: undefined
-  - contentlayer: undefined
-  - mdx: undefined
-  - markdown: undefined
+tags:
+  - tech
+  - next
+  - contentlayer
+  - mdx
+  - markdown
 isPublished: true
 isDeleted: false
 publishedAt: 2025-02-26T19:44:36+09:00

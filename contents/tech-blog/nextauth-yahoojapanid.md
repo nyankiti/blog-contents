@@ -3,7 +3,7 @@ id: 110cef7c-d8db-8072-b929-d4a745ca745b
 title: NextAuthでYahoo!JapanIDでログインするためのカスタムプロバイダーを作成する
 date: 2024-09-29T11:59:00.000Z
 slug: nextauth-yahoojapanid
-tags: 
+tags:
   - tech
   - auth
   - OIDC

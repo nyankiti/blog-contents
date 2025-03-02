@@ -3,7 +3,7 @@ id: d73971f3-457d-4873-bc21-5b54d7586c40
 title: Google Analytics Data APIを利用してPV数と人気記事を取得する
 date: 2024-08-11T09:08:00.000Z
 slug: pageviews-by-gadataapi
-tags: 
+tags:
   - tech
   - GCP
 excerpt: undefined

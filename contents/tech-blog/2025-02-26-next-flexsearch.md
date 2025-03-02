@@ -1,9 +1,9 @@
 ---
 title: "flexsearchを用いてNext.jsでサイト内検索を実装する"
 slug: "2025-02-26-next-flexsearch"
-tags: 
-    - tech
-    - poem
+tags:
+  - tech
+  - poem
 isPublished: false
 isDeleted: false
 publishedAt: 2025-02-26T19:34:20+09:00

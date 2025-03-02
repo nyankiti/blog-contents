@@ -3,10 +3,10 @@ id: 194cef7c-d8db-801b-b678-f2aebf817802
 title: npm workspaceを用いて共通処理をpackageとして切り出す
 date: 2025-02-08T03:37:00.000Z
 slug: npm-workspace-shared
-tags: 
-  - tech: undefined
-  - next: undefined
-  - npm: undefined
+tags:
+  - tech
+  - next
+  - npm
 excerpt: undefined
 updatedAt: 2025-02-08T07:28:00.000Z
 isPublished: true

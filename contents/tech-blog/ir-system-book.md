@@ -3,7 +3,7 @@ id: 117cef7c-d8db-8037-82c2-f4017aea7047
 title: 【読書感想】『検索システム ― 実務者のための開発改善ガイドブック』メモ、感想
 date: 2024-10-06T11:48:00.000Z
 slug: ir-system-book
-tags: 
+tags:
   - bookreview
   - tech
 excerpt: undefined
