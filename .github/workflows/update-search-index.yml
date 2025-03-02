@@ -39,6 +39,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           DATETIME=$(date +"%Y-%m-%d %H:%M:%S")
           git add .
-          git commit -m "[$DATETIME] update notion blog content by bot"
+          git commit -m "[$DATETIME] update tech blog search index by bot"
           git push origin main
         if: steps.diff.outcome == 'failure'
