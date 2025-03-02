@@ -1,13 +1,14 @@
-name: update-contents
+name: update-search-index
 on:
-  schedule:
-    - cron: "0 4,14 * * *" # 毎日 4時、14時 に実行
+  push:
+    branches:
+      - main
 # ワークフローに書き込み権限を与える ref:https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
 permissions:
   contents: write
 jobs:
   command:
-    name: Use Linux commands
+    name: Update Search Index
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,27 +20,16 @@ jobs:
           cache: "npm"
       - name: build application
         run: npm ci
-      - name: run views fetch
+      - name: run generate search index
         env:
-          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
-          GCP_SA_PROJECT_ID: ${{ secrets.GCP_SA_PROJECT_ID }}
-          GCP_SA_PRIVATE_KEY_ID: ${{ secrets.GCP_SA_PRIVATE_KEY_ID }}
-          GCP_SA_PRIVATE_KEY: ${{ secrets.GCP_SA_PRIVATE_KEY }}
-          GCP_SA_CLIENT_X509_CERT_URL: ${{ secrets.GCP_SA_CLIENT_X509_CERT_URL }}
-          GCP_SA_CLIENT_ID: ${{ secrets.GCP_SA_CLIENT_ID }}
-          GCP_SA_CLIENT_EMAIL: ${{ secrets.GCP_SA_CLIENT_EMAIL }}
           GITHUB_WORKSPACE: $GITHUB_WORKSPACE
-        run: npm run updateViews
+        run: npm run generateSearchIndex
       - name: diff
         id: diff # commit を実施する場合の条件分岐にdiffの結果を利用するため明示的にidを指定
         run: |
           git add -N .
           git diff --name-only --exit-code
         continue-on-error: true
-      # TODO: ブログの更新を伝えるための新たな手段を検討する
-      # - name: update contents_last_updated.tag
-      #   run: node dist/update-tag/index.js
-      #   if: steps.diff.outcome == 'failure'
       - name: commit and push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

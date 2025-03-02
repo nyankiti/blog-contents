@@ -4,7 +4,8 @@
   "scripts": {
     "textlint": "textlint",
     "lefthook": "lefthook",
-    "updateViews": "ts-node batch/updateViews.ts"
+    "updateViews": "ts-node batch/updateViews.ts",
+    "generateSearchIndex": "ts-node batch/generateSearchIndex.ts"
   },
   "devDependencies": {
     "@textlint/textlint-plugin-markdown": "^14.4.2",
@@ -25,7 +26,10 @@
     "@actions/github": "^6.0.0",
     "@google-analytics/data": "^4.12.0",
     "dotenv": "^16.4.7",
+    "gray-matter": "^4.0.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "remark": "^15.0.1",
+    "strip-markdown": "^6.0.0"
   }
 }

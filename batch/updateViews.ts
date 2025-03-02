@@ -1,5 +1,5 @@
 import * as core from "@actions/core";
-import { GaApiClient } from "./ga-client";
+import { GaApiClient } from "./libs/ga-client";
 import { writeFile, readFile } from "fs/promises";
 
 export async function run() {
