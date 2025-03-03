@@ -1,6 +1,6 @@
 ---
-title: "Next.jsとmarkdownのブログでcontentlayerからmdx-bundlerに移行した話"
-slug: "2025-02-26-next-mdx-bundler-blog"
+title: Next.jsとmarkdownのブログでcontentlayerからmdx-bundlerに移行した話
+slug: 2025-02-26-next-mdx-bundler-blog
 tags:
   - tech
   - next
@@ -9,9 +9,9 @@ tags:
   - markdown
 isPublished: true
 isDeleted: false
-publishedAt: 2025-02-26T19:44:36+09:00
-updatedAt: 2025-02-28T23:05:18+09:00
-views: 7
+publishedAt: 2025-02-26T10:44:36.000Z
+updatedAt: 2025-02-28T14:05:18.000Z
+views: '13'
 ---
 import { Bookmark } from "../../components/Bookmark";
 

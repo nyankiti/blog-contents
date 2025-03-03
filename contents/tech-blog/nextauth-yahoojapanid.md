@@ -11,8 +11,8 @@ excerpt: undefined
 updatedAt: 2024-09-29T13:30:00.000Z
 isPublished: true
 isDeleted: false
-publishedAt: 2024-09-29
-views: 88
+publishedAt: 2024-09-29T00:00:00.000Z
+views: '90'
 ---
 import { Bookmark } from "../../components/Bookmark";
   

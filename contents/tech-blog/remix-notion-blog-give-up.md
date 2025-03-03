@@ -11,8 +11,8 @@ excerpt: undefined
 updatedAt: 2024-09-07T12:37:00.000Z
 isPublished: true
 isDeleted: false
-publishedAt: 2024-08-31
-views: 91
+publishedAt: 2024-08-31T00:00:00.000Z
+views: '91'
 ---
 
   

@@ -1,6 +1,6 @@
 ---
-title: "dotfilesの育成 in 2025【mise, sheldon, raycastなど】"
-slug: "2025-03-01-my-dotfiles"
+title: 'dotfilesの育成 in 2025【mise, sheldon, raycastなど】'
+slug: 2025-03-01-my-dotfiles
 tags:
   - tech
   - dotfiles
@@ -11,9 +11,9 @@ tags:
   - shell
 isPublished: true
 isDeleted: false
-publishedAt: 2025-03-01T11:31:36+09:00
-updatedAt: 2025-03-01T23:49:21+09:00
-views: 10
+publishedAt: 2025-03-01T02:31:36.000Z
+updatedAt: 2025-03-01T14:49:21.000Z
+views: '13'
 ---
 import { Bookmark } from "../../components/Bookmark";
 

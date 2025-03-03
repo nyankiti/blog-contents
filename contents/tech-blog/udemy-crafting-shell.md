@@ -10,8 +10,8 @@ tags:
 updatedAt: 2024-09-14T04:56:00.000Z
 isPublished: true
 isDeleted: false
-publishedAt: 2024-09-04T00:00:00.000+09:00
-views: 58
+publishedAt: 2024-09-03T15:00:00.000Z
+views: '58'
 ---
 import { Bookmark } from "../../components/Bookmark";
   

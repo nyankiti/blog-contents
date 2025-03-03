@@ -7,11 +7,11 @@ tags:
   - bookreview
   - tech
 excerpt: undefined
-updatedAt: 2025-03-01T23:40:56+09:00
+updatedAt: 2025-03-01T14:40:56.000Z
 isPublished: true
 isDeleted: false
-publishedAt: 2024-10-06
-views: 24
+publishedAt: 2024-10-06T00:00:00.000Z
+views: '24'
 ---
 import { Bookmark } from "../../components/Bookmark";
   

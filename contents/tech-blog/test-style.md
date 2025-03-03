@@ -6,11 +6,11 @@ slug: test-style
 tags:
   - tech
   - poem
-updatedAt: 2025-02-24T21:43:23+09:00
+updatedAt: 2025-02-24T12:43:23.000Z
 isPublished: true
 isDeleted: false
-publishedAt: 2024-08-14T00:00:00.000+09:00
-views: 84
+publishedAt: 2024-08-13T15:00:00.000Z
+views: '86'
 ---
 import { Bookmark } from "../../components/Bookmark";
   

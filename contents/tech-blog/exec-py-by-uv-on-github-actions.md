@@ -12,8 +12,8 @@ excerpt: undefined
 updatedAt: 2025-02-08T09:40:00.000Z
 isPublished: true
 isDeleted: false
-publishedAt: 2025-01-11
-views: 55
+publishedAt: 2025-01-11T00:00:00.000Z
+views: '57'
 ---
 
   

@@ -10,8 +10,8 @@ excerpt: undefined
 updatedAt: 2024-09-15T04:02:00.000Z
 isPublished: true
 isDeleted: false
-publishedAt: 2024-09-12T00:00:00.000+09:00
-views: 71
+publishedAt: 2024-09-11T15:00:00.000Z
+views: '71'
 ---
 import { Bookmark } from "../../components/Bookmark";
   
