@@ -1,0 +1,23 @@
+fragment PullRequestInfo on PullRequest {
+  title
+  author {
+    login
+  }
+  url
+  mergedAt
+  createdAt
+}
+
+query GetSingleRepository($owner: String!, $name: String!) {
+  repository(owner: $owner, name: $name) {
+    pullRequests(
+      first: 10
+      orderBy: { field: UPDATED_AT, direction: DESC }
+      states: [MERGED]
+    ) {
+      nodes {
+        ...PullRequestInfo
+      }
+    }
+  }
+}
