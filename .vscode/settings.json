@@ -5,7 +5,7 @@
   "lpubsppop01.autoTimeStamp.lineLimit": 20,
   "lpubsppop01.autoTimeStamp.modifiedTimeStart": "^updatedAt: ",
   "lpubsppop01.autoTimeStamp.momentFormat": "YYYY-MM-DDTHH:mm:ss+09:00",
-  "vsnotes.defaultNotePath": "~/src/blog-contents/contents",
+  "vsnotes.defaultNotePath": "~/src/github.com/nyankiti/blog-contents/contents",
   "vsnotes.tokens": [
     {
       "type": "datetime",

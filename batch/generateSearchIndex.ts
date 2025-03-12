@@ -13,14 +13,18 @@ export type PostDocument = {
   content: string;
 };
 
-const cleanMarkdown = async (content: string) => {
+const removeBookmarkImport = (text: string) => {
+  return text.replace(/^import { Bookmark } from ["'].*["'];?\n?/gm, "");
+};
+
+export const cleanMarkdown = async (content: string) => {
   const result = await remark().use(strip).process(content);
-  return String(result);
+  return removeBookmarkImport(String(result));
 };
 
 // 日本語文字列の分かち書き（簡易版）
 // TODO: kuromoji.js や TinySegmenter などのライブラリを用いて精度改善
-const tokenizeJapanese = (text: string): string => {
+export const tokenizeJapanese = (text: string): string => {
   // この簡易実装では、以下を行います：
   // 1. 英数字と日本語の間に空白を挿入
   // 2. 句読点の後に空白を挿入
