@@ -13,7 +13,7 @@ isPublished: true
 isDeleted: false
 publishedAt: 2025-03-01T02:31:36.000Z
 updatedAt: 2025-03-01T14:49:21.000Z
-views: '26'
+views: '28'
 ---
 import { Bookmark } from "../../components/Bookmark";
 
