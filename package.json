@@ -8,10 +8,12 @@
     "updateViews": "ts-node batch/updateViews.ts",
     "generateSearchIndex": "ts-node batch/generateSearchIndex.ts",
     "summarizeFollowingRepository": "ts-node batch/summarizeFollowingRepository.ts",
+    "summarizeGithubByMcp": "ts-node batch/summarizeGithubByMcp.ts",
     "codegen": "graphql-codegen --config batch/libs/graphql/codegen.ts"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "5.0.5",
+    "@graphql-codegen/introspection": "4.0.3",
     "@graphql-codegen/typescript": "4.1.5",
     "@graphql-codegen/typescript-operations": "^4.5.1",
     "@textlint/textlint-plugin-markdown": "^14.4.2",
@@ -25,17 +27,19 @@
     "textlint-rule-preset-japanese": "^10.0.4",
     "textlint-rule-prh": "^6.0.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3",
-    "@graphql-codegen/introspection": "4.0.3"
+    "typescript": "^5.7.3"
   },
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.0",
     "@apollo/client": "^3.13.2",
     "@google-analytics/data": "^4.12.0",
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "@modelcontextprotocol/server-github": "2025.1.17",
     "dotenv": "^16.4.7",
     "graphql": "^16.10.0",
     "gray-matter": "^4.0.3",
+    "openai": "^4.87.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "remark": "^15.0.1",
