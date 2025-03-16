@@ -1,6 +1,6 @@
 ---
 title: 簡易MCPクライアント/サーバーをnode.jsアプリケーションに組み込む
-slug: 2025-03-16-mcp-app-tutorial
+slug: 2025-03-17-mcp-app-tutorial
 tags:
   - tech
   - MCP
@@ -9,7 +9,7 @@ tags:
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-17T00:12:25+09:00
-updatedAt: 2025-03-17T00:14:38+09:00
+updatedAt: 2025-03-17T00:16:26+09:00
 views: 0
 ---
 import { Bookmark } from "../../components/Bookmark";
