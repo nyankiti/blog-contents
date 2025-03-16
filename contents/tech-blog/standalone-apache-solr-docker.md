@@ -7,11 +7,11 @@ tags:
   - tech
   - solr
 excerpt: undefined
-updatedAt: 2024-10-15T13:34:00.000Z
+updatedAt: 2025-03-17T01:16:38+09:00
 isPublished: true
-isDeleted: false
+isDeleted: true
 publishedAt: 2024-10-15T00:00:00.000Z
-views: '72'
+views: 72
 ---
 import { Bookmark } from "../../components/Bookmark";
   
