@@ -1,5 +1,5 @@
 ---
-title: 簡易MCPクライアント/サーバーをnode.jsアプリケーションに組み込む
+title: node.jsアプリケーションで簡易MCP Client/Serverを作成する
 slug: 2025-03-17-mcp-app-tutorial
 tags:
   - tech
@@ -9,7 +9,7 @@ tags:
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-17T00:12:25+09:00
-updatedAt: 2025-03-17T00:16:26+09:00
+updatedAt: 2025-03-17T00:20:21+09:00
 views: 0
 ---
 import { Bookmark } from "../../components/Bookmark";
@@ -17,7 +17,7 @@ import { Bookmark } from "../../components/Bookmark";
 ## はじめに
 巷で話題のMCPについて、Claude DesktopやCursor, ClineなどをMCPクライアントとして紹介されている記事は多いものの、node.jsアプリケーションに組み込む方法は紹介されていないように感じたので、自作のアプリケーションに組み込む方法を紹介します。
 
-公式ドキュメントやその他ブログ等の情報である程度MCPの情報をキャッチアップし終わり、そろそろ実装してみようかなと言った人の参考になれば嬉しいなーと思っています。
+公式ドキュメントやその他ブログ等の情報である程度MCPの情報をキャッチアップし終わり、そろそろ実装してみようかなといった人の参考になれば嬉しいなーと思っています。
 
 記事を読むのが面倒な方は以下で実装を公開しています。
 https://github.com/nyankiti/genai-lab/blob/main/src/mcpApp.ts
@@ -28,11 +28,9 @@ https://github.com/nyankiti/genai-lab/blob/main/src/mcpApp.ts
 
 LLMに外部データソースを組み込むためのプロトコルです。
 外部データソースとは、最新の天気やローカルのファイルシステム、自社のDBなど様々です。MCPで統一されるフォーマットに従って、AI Agent的に動くLLMに追加のアクションを提供するものとなります。
-できることとしては、openAIの[function-calling](https://platform.openai.com/docs/guides/function-calling)とほとんど同じと感じています。function-callingに比較して実装の自由度やモデルに依存しないものとなっているので今後のAI Agentへの外部データソース組み込みのスタンダードになっていくのでは？と注目しています。
+できることとしては、openAIの[function-calling](https://platform.openai.com/docs/guides/function-calling)とほとんど同じと感じています。function-callingに比較して実装の自由度が高くモデルに依存しないものとなっているので今後のAI Agentへの外部データソース組み込みのスタンダードになっていくのでは？と注目しています。
 
-MCPについてはすでに色々な人が解説しているので、適当にググってみるのが良いと思います。
-
-本記事ではMCP ClientとMCP Serverの簡易的なものをnode.jsアプリケーションで作成したので紹介します。
+本記事ではnode.jsを用いて簡易的なMCP ClientとMCP Serverを作成方法を紹介します。
 
 ## 実装したもの
 - github上のあるリポジトリの直近のマージされたPRの情報を取得するツールを要するMCPサーバー
