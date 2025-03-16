@@ -9,7 +9,7 @@ tags:
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-17T00:12:25+09:00
-updatedAt: 2025-03-17T00:20:21+09:00
+updatedAt: 2025-03-17T00:30:53+09:00
 views: 0
 ---
 import { Bookmark } from "../../components/Bookmark";
@@ -38,7 +38,8 @@ LLMに外部データソースを組み込むためのプロトコルです。
   - AIクライアントには[groq-sdk](https://www.npmjs.com/package/groq-sdk)、モデルは`llama-3.3-70b-versatile`で利用
 
 ### MCPサーバー
-```
+mcp-server.ts
+```typescript
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 
@@ -79,7 +80,7 @@ runServer().catch((error) => {
 ```
 
 tools.ts
-```
+```typescript
 import type { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import {
   CallToolRequestSchema,
@@ -144,7 +145,9 @@ export const setupToolHandlers = (mcpServer: Server, githubClient: GithubClient)
 
 ### AIクライアント(MCPクライアント)
 `messages`配列の中に、MCPサーバーを呼び出すための`role:assistant`なメッセージ, MCPサーバーからのレスポンスを追加して文脈を増やしながら最終的な回答を生成するという流れで実装しています。
-```
+
+mcp-client.ts
+```typescript
 import path from 'node:path';
 import { Client as MCPClient } from '@modelcontextprotocol/sdk/client/index.js';
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
@@ -279,7 +282,7 @@ export class MyMCPClient {
 ### 動作確認
 `'facebook/react リポジトリの直近一週間にマージされPRの内容についてmarkdown形式で要約して。どのような議論があったかも要約して。PRのリンクも参照できるようにして。'`とAIに質問した場合の結果にです。
 
-```
+```markdown
 ### facebook/react リポジトリの直近一週間にマージされたPRの内容について
 
 以下のPRは、直近一週間にマージされたPRです。
