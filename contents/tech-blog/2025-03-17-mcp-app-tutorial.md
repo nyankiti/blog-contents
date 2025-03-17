@@ -8,9 +8,9 @@ tags:
   - node.js
 isPublished: true
 isDeleted: false
-publishedAt: 2025-03-17T00:12:25+09:00
-updatedAt: 2025-03-17T00:30:53+09:00
-views: 0
+publishedAt: 2025-03-16T15:12:25.000Z
+updatedAt: 2025-03-16T15:30:53.000Z
+views: '6'
 ---
 import { Bookmark } from "../../components/Bookmark";
 
