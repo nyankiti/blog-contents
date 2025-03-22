@@ -1,7 +1,10 @@
 import path from "node:path";
-import { readFile, readdir } from "node:fs/promises";
+import { readdir, writeFile } from "node:fs/promises";
+import matter from "gray-matter";
+import { generatePostsDescription } from "./generate-posts-description";
+import { baseDir, getPostDirPath, readFileFromMdorMds } from "./file";
 
-export type FrontMatter = {
+type TechBlogFrontMatter = {
   title: string;
   slug: string;
   tags: string[];
@@ -13,47 +16,60 @@ export type FrontMatter = {
   description?: string;
 };
 
-export const baseDir = process.env.BASE_DIR || process.cwd();
+// デフォルト値を設定するヘルパー関数
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const castTechBlogFrontMatter = (data: {
+  [key: string]: any;
+}): TechBlogFrontMatter => {
+  return {
+    title: data.title || "",
+    description: data.description || data.title || "",
+    slug: data.slug || "",
+    tags: Array.isArray(data.tags) ? data.tags : [],
+    isPublished: Boolean(data.isPublished),
+    isDeleted: Boolean(data.isDeleted),
+    publishedAt: data.publishedAt || "1970-01-01",
+    updatedAt: data.updatedAt || data.publishedAt || "1970-01-01",
+    views: Number(data.views) || 0,
+  };
+};
 
-export const getPostDirPath = () => path.join(baseDir, "./contents/tech-blog");
-
-export async function readFileFromMdorMds(
-  slug: string,
-  baseDir: string
-): Promise<string | null> {
-  const extensions = [".md", ".mdx"];
-  let fileContent: string | null = null;
-  let usedExt: string | null = null;
-
-  for (const ext of extensions) {
-    const filepath = path.join(getPostDirPath(), `${slug}${ext}`);
-    try {
-      fileContent = await readFile(filepath, "utf-8");
-      usedExt = ext;
-      break;
-    } catch {
-      continue;
-    }
-  }
-
-  if (!fileContent || !usedExt) {
-    console.warn(`No valid file found for slug: ${slug}${usedExt}`);
+const getPostJson = async (slug: string) => {
+  try {
+    const fileContent = await readFileFromMdorMds(slug, getPostDirPath());
+    if (!fileContent) return null;
+    const { data, content } = matter(fileContent);
+    const description = await generatePostsDescription(content);
+    const frontMatters = castTechBlogFrontMatter({ ...data, description });
+    return {
+      ...frontMatters,
+      content,
+    };
+  } catch (error) {
+    console.error("Error reading Markdown file:", error);
     return null;
   }
-  return fileContent;
-}
+};
 
-export const getSlugs = async (baseDir: string): Promise<string[]> => {
-  const postDirPath = path.join(baseDir, "./contents/tech-blog");
+export const generateTechBlogPostsJson = async () => {
+  const postDirPath = getPostDirPath();
   const postFiles = await readdir(postDirPath);
+  const slugs = postFiles.map((file) =>
+    path.basename(file, path.extname(file))
+  );
 
-  return postFiles
-    .map((file) => {
-      if (path.extname(file) === ".md" || path.extname(file) === ".mdx") {
-        const slug = path.basename(file, path.extname(file));
-        return slug;
-      }
-      return null;
-    })
-    .filter(Boolean) as string[];
+  const postsJsonPromises = slugs.map((slug) => getPostJson(slug));
+  const postsJson = (await Promise.all(postsJsonPromises)).filter(
+    (post) => post !== null
+  );
+  postsJson.sort(
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
+
+  writeFile(
+    path.join(baseDir, "dist/posts.json"),
+    JSON.stringify(postsJson, null, 2)
+  );
+  console.log(`✅ Posts JSON generated at dist/posts.json`);
 };

@@ -1,9 +1,9 @@
 import matter from "gray-matter";
-import { getSlugs, readFileFromMdorMds } from "./libs/posts";
 import path from "node:path";
 import { writeFile } from "node:fs/promises";
 import strip from "strip-markdown";
 import { remark } from "remark";
+import { getSlugs, readFileFromMdorMds } from "./file";
 
 export type PostDocument = {
   slug: string;
@@ -40,10 +40,6 @@ export const tokenizeJapanese = (text: string): string => {
 };
 
 export const generateSearchIndex = async () => {
-  // const baseDir = process.env.GITHUB_WORKSPACE
-  //   ? process.env.GITHUB_WORKSPACE
-  //   : "/home/runner/work/blog-contents";
-
   const baseDir = path.join(process.cwd());
 
   const slugs = await getSlugs(baseDir);
@@ -87,7 +83,7 @@ export const generateSearchIndex = async () => {
   });
 
   await writeFile(
-    path.join(baseDir, "public", "tech-blog-search-index.json"),
+    path.join(baseDir, "dist/tech-blog-search-index.json"),
     JSON.stringify(optimizedIndex)
   );
 
@@ -100,5 +96,3 @@ export const generateSearchIndex = async () => {
     } 件の記事をインデックス化しました。（サイズ: 約${indexSize.toFixed(2)}KB）`
   );
 };
-
-generateSearchIndex();

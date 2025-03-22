@@ -4,13 +4,11 @@
   "scripts": {
     "textlint": "textlint",
     "lefthook": "lefthook",
-    "graphql-codegen": "graphql-codegen",
     "updateViews": "ts-node batch/updateViews.ts",
-    "generateSearchIndex": "ts-node batch/generateSearchIndex.ts",
+    "generatePagesArtifact": "ts-node batch/generatePagesArtifact.ts",
     "summarizeFollowingRepository": "ts-node batch/summarizeFollowingRepository.ts",
-    "summarizeGithubByMcp": "ts-node batch/summarizeGithubByMcp.ts",
     "codegen": "graphql-codegen --config batch/libs/graphql/codegen.ts",
-    "generatePagesArtifact": "ts-node batch/generatePagesArtifact.ts"
+    "graphql-codegen": "graphql-codegen"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "5.0.5",
@@ -35,8 +33,6 @@
     "@actions/github": "^6.0.0",
     "@apollo/client": "^3.13.2",
     "@google-analytics/data": "^4.12.0",
-    "@modelcontextprotocol/sdk": "^1.7.0",
-    "@modelcontextprotocol/server-github": "2025.1.17",
     "dotenv": "^16.4.7",
     "graphql": "^16.10.0",
     "gray-matter": "^4.0.3",

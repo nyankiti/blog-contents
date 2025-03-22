@@ -31,6 +31,6 @@
   "vsnotes.templates": ["tech_blog", "gourmet_blog"],
   "markdown.copyFiles.destination": {
     "contents/tech-blog/**/*": "images/${documentBaseName}/",
-    "contents/gourmet/**/*": "images/${documentBaseName}/"
+    "contents/gourmet/**/*": "../../public/gourmet/images/${documentBaseName}/"
   }
 }
