@@ -2,7 +2,7 @@ import path from "node:path";
 import { readdir, writeFile } from "node:fs/promises";
 import matter from "gray-matter";
 import { generatePostsDescription } from "./generate-posts-description";
-import { baseDir, getPostDirPath, readFileFromMdorMds } from "./file";
+import { baseDir, readFileFromMdorMds, techBlogDir } from "./file";
 
 type TechBlogFrontMatter = {
   title: string;
@@ -36,7 +36,7 @@ const castTechBlogFrontMatter = (data: {
 
 const getPostJson = async (slug: string) => {
   try {
-    const fileContent = await readFileFromMdorMds(slug, getPostDirPath());
+    const fileContent = await readFileFromMdorMds(slug, techBlogDir);
     if (!fileContent) return null;
     const { data, content } = matter(fileContent);
     const description = await generatePostsDescription(content);
@@ -52,8 +52,7 @@ const getPostJson = async (slug: string) => {
 };
 
 export const generateTechBlogPostsJson = async () => {
-  const postDirPath = getPostDirPath();
-  const postFiles = await readdir(postDirPath);
+  const postFiles = await readdir(techBlogDir);
   const slugs = postFiles.map((file) =>
     path.basename(file, path.extname(file))
   );

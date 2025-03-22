@@ -8,7 +8,9 @@ export const distDir = path.join(baseDir, "dist");
 
 export const contentsDir = path.join(baseDir, "contents");
 
-export const getPostDirPath = () => path.join(baseDir, "./contents/tech-blog");
+export const techBlogDir = path.join(contentsDir, "tech-blog");
+
+export const gourmetBlogDir = path.join(contentsDir, "gourmet");
 
 export async function readFileFromMdorMds(
   slug: string,
@@ -19,7 +21,7 @@ export async function readFileFromMdorMds(
   let usedExt: string | null = null;
 
   for (const ext of extensions) {
-    const filepath = path.join(getPostDirPath(), `${slug}${ext}`);
+    const filepath = path.join(techBlogDir, `${slug}${ext}`);
     try {
       fileContent = await readFile(filepath, "utf-8");
       usedExt = ext;

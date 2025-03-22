@@ -2,7 +2,7 @@ import path from "node:path";
 import { readdir, writeFile } from "node:fs/promises";
 import matter from "gray-matter";
 import { generatePostsDescription } from "./generate-posts-description";
-import { baseDir, getPostDirPath, readFileFromMdorMds } from "./file";
+import { baseDir, gourmetBlogDir, readFileFromMdorMds } from "./file";
 
 type GourmetBlogFrontMatter = {
   title: string;
@@ -44,7 +44,7 @@ const castGourmetBlogFrontMatter = (data: {
 
 const getGourmetBlogJson = async (slug: string) => {
   try {
-    const fileContent = await readFileFromMdorMds(slug, getPostDirPath());
+    const fileContent = await readFileFromMdorMds(slug, gourmetBlogDir);
     if (!fileContent) return null;
     const { data, content } = matter(fileContent);
     const description = await generatePostsDescription(content);
@@ -60,8 +60,7 @@ const getGourmetBlogJson = async (slug: string) => {
 };
 
 export const generateGourmetPostsJson = async () => {
-  const postDirPath = getPostDirPath();
-  const postFiles = await readdir(postDirPath);
+  const postFiles = await readdir(gourmetBlogDir);
   const slugs = postFiles.map((file) =>
     path.basename(file, path.extname(file))
   );
