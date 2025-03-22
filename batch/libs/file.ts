@@ -1,7 +1,12 @@
 import path from "node:path";
+import { execSync } from "node:child_process";
 import { readFile, readdir, writeFile } from "node:fs/promises";
 
 export const baseDir = process.env.BASE_DIR || process.cwd();
+
+export const distDir = path.join(baseDir, "dist");
+
+export const contentsDir = path.join(baseDir, "contents");
 
 export const getPostDirPath = () => path.join(baseDir, "./contents/tech-blog");
 
@@ -44,4 +49,11 @@ export const getSlugs = async (baseDir: string): Promise<string[]> => {
       return null;
     })
     .filter(Boolean) as string[];
+};
+
+export const copyImageToDist = () => {
+  execSync(
+    `find ${contentsDir} -type d -name "images" | xargs -I {} cp -r {} ${distDir}`,
+    { stdio: "inherit" }
+  );
 };
