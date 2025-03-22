@@ -1,11 +1,67 @@
-name: Build and Deploy JSON on Github Pages
+name: Updates Views Count and Build and Deploy to Github Pages
+
 on:
   push:
     branches:
       - main
+  schedule:
+    - cron: "0 4 * * *" # 毎日 4時 に実行
+
+    # ワークフローに書き込み権限を与える ref:https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
+permissions:
+  contents: write
+
 jobs:
+  update-view-count:
+    name: Update View Count
+    runs-on: ubuntu-latest
+    outputs:
+      committed: ${{ steps.commit_push.outcome == 'success' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - name: build application
+        run: npm install
+      - name: run update views
+        env:
+          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
+          GCP_SA_PROJECT_ID: ${{ secrets.GCP_SA_PROJECT_ID }}
+          GCP_SA_PRIVATE_KEY_ID: ${{ secrets.GCP_SA_PRIVATE_KEY_ID }}
+          GCP_SA_PRIVATE_KEY: ${{ secrets.GCP_SA_PRIVATE_KEY }}
+          GCP_SA_CLIENT_X509_CERT_URL: ${{ secrets.GCP_SA_CLIENT_X509_CERT_URL }}
+          GCP_SA_CLIENT_ID: ${{ secrets.GCP_SA_CLIENT_ID }}
+          GCP_SA_CLIENT_EMAIL: ${{ secrets.GCP_SA_CLIENT_EMAIL }}
+          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
+        run: npm run updateViews
+      - name: diff
+        id: diff # commit を実施する場合の条件分岐にdiffの結果を利用するため明示的にidを指定
+        run: |
+          git add -N .
+          git diff --name-only --exit-code
+        continue-on-error: true
+      - name: commit and push
+        id: commit_push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -x
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          DATETIME=$(date +"%Y-%m-%d %H:%M:%S")
+          git add .
+          git commit -m "[$DATETIME] update tech blog view count by bot"
+          git push origin main
+        if: steps.diff.outcome == 'failure'
   build:
     runs-on: ubuntu-latest
+    needs: update-view-count
+    # main pushもしくは、update-view-countにてviews数に増加があった場合に github pages へのdeployを実行
+    if: github.event_name == 'push' || needs.update-view-count.outputs.committed == 'true'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
