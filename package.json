@@ -9,7 +9,8 @@
     "generateSearchIndex": "ts-node batch/generateSearchIndex.ts",
     "summarizeFollowingRepository": "ts-node batch/summarizeFollowingRepository.ts",
     "summarizeGithubByMcp": "ts-node batch/summarizeGithubByMcp.ts",
-    "codegen": "graphql-codegen --config batch/libs/graphql/codegen.ts"
+    "codegen": "graphql-codegen --config batch/libs/graphql/codegen.ts",
+    "generatePagesArtifact": "ts-node batch/generatePagesArtifact.ts"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "5.0.5",
@@ -43,6 +44,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "remark": "^15.0.1",
+    "remark-parse": "^11.0.0",
     "strip-markdown": "^6.0.0"
   }
 }

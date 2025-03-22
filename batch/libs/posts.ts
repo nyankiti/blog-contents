@@ -1,6 +1,22 @@
 import path from "node:path";
 import { readFile, readdir } from "node:fs/promises";
 
+export type FrontMatter = {
+  title: string;
+  slug: string;
+  tags: string[];
+  isPublished: boolean;
+  isDeleted: boolean;
+  publishedAt: string;
+  updatedAt: string;
+  views: number;
+  description?: string;
+};
+
+export const baseDir = process.env.BASE_DIR || process.cwd();
+
+export const getPostDirPath = () => path.join(baseDir, "./contents/tech-blog");
+
 export async function readFileFromMdorMds(
   slug: string,
   baseDir: string
@@ -10,10 +26,7 @@ export async function readFileFromMdorMds(
   let usedExt: string | null = null;
 
   for (const ext of extensions) {
-    const filepath = path.join(
-      path.join(baseDir, "./contents/tech-blog"),
-      `${slug}${ext}`
-    );
+    const filepath = path.join(getPostDirPath(), `${slug}${ext}`);
     try {
       fileContent = await readFile(filepath, "utf-8");
       usedExt = ext;

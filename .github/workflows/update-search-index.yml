@@ -1,8 +1,10 @@
 name: update-search-index
 on:
-  push:
-    branches:
-      - main
+  # TODO: github pages deployタスクに含めたいので一時的にdispatchに変更
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main
 # ワークフローに書き込み権限を与える ref:https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
 permissions:
   contents: write
