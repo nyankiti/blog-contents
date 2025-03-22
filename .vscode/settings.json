@@ -28,8 +28,9 @@
   ],
   "vsnotes.defaultNoteTitle": "{dt}-{title}.{ext}",
   "vsnotes.defaultNoteName": "no-title",
-  "vsnotes.templates": ["tech_blog"],
+  "vsnotes.templates": ["tech_blog", "gourmet_blog"],
   "markdown.copyFiles.destination": {
-    "contents/tech-blog/**/*": "images/${documentBaseName}/"
+    "contents/tech-blog/**/*": "images/${documentBaseName}/",
+    "contents/gourmet/**/*": "images/${documentBaseName}/"
   }
 }

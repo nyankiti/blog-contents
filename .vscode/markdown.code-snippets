@@ -9,10 +9,39 @@
             "  - tech",
             "isPublished: false",
             "isDeleted: false",
-            "publishedAt: ${CURRENT_YEAR}-$CURRENT_MONTH-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+09:00",
-            "updatedAt: ${CURRENT_YEAR}-$CURRENT_MONTH-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+09:00",
+            "publishedAt: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+09:00",
+            "updatedAt: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+09:00",
             "views: 0",
             "---"
+        ]
+    },
+    "vsnote_template_gourmet_blog": {
+        "prefix": "vsnote_template_gourmet_blog",
+        "body": [
+            "---",
+            "title:",
+            "slug: ${TM_FILENAME_BASE}",
+            "locationTags:",
+            "  - 梅田",
+            "gourmetTags:",
+            "  - ラーメン",
+            "isPublished: false",
+            "isDeleted: false",
+            "visitedAt: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+            "publishedAt: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+09:00",
+            "updatedAt: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+09:00",
+            "views: 0",
+            "thumbnail: ",
+            "geo: ",
+            "---",
+            "",
+            "",
+            "## リンク集",
+            "- Google: ",
+            "- 食べログ: ",
+            "- HotPepper: ",
+            "- Retty: ",
+            "- ぐるなび: "
         ]
     }
 }
