@@ -4,9 +4,9 @@
   "scripts": {
     "textlint": "textlint",
     "lefthook": "lefthook",
-    "updateViews": "ts-node batch/updateViews.ts",
-    "generatePagesArtifact": "ts-node batch/generatePagesArtifact.ts",
-    "summarizeFollowingRepository": "ts-node batch/summarizeFollowingRepository.ts",
+    "updateViews": "tsx batch/updateViews.ts",
+    "generatePagesArtifact": "tsx batch/generatePagesArtifact.ts",
+    "summarizeFollowingRepository": "tsx batch/summarizeFollowingRepository.ts",
     "codegen": "graphql-codegen --config batch/libs/graphql/codegen.ts",
     "graphql-codegen": "graphql-codegen"
   },
@@ -25,7 +25,7 @@
     "textlint-rule-no-empty-section": "^1.1.0",
     "textlint-rule-preset-japanese": "^10.0.4",
     "textlint-rule-prh": "^6.0.0",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
     "typescript": "^5.7.3"
   },
   "dependencies": {
