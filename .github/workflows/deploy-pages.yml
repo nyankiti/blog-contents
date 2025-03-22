@@ -72,6 +72,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: refs/heads/main # update-view-countにて最新コミットが追加されている可能性があるため、明示的にmainブランチの最新状態を取得
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
