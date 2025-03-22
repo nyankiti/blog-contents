@@ -3,7 +3,7 @@ import path from "node:path";
 import { writeFile } from "node:fs/promises";
 import strip from "strip-markdown";
 import { remark } from "remark";
-import { getSlugs, readFileFromMdorMds } from "./file";
+import { baseDir, getSlugs, readFileFromMdorMds, techBlogDir } from "./file";
 
 export type PostDocument = {
   slug: string;
@@ -40,13 +40,11 @@ export const tokenizeJapanese = (text: string): string => {
 };
 
 export const generateSearchIndex = async () => {
-  const baseDir = path.join(process.cwd());
-
-  const slugs = await getSlugs(baseDir);
+  const slugs = await getSlugs(techBlogDir);
   const searchIndex: PostDocument[] = [];
 
   for (const slug of slugs) {
-    const fileContent = await readFileFromMdorMds(slug, baseDir);
+    const fileContent = await readFileFromMdorMds(slug, techBlogDir);
     if (!fileContent) continue;
 
     const { data, content } = matter(fileContent);

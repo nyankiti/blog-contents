@@ -14,14 +14,14 @@ export const gourmetBlogDir = path.join(contentsDir, "gourmet");
 
 export async function readFileFromMdorMds(
   slug: string,
-  baseDir: string
+  postDir: string
 ): Promise<string | null> {
   const extensions = [".md", ".mdx"];
   let fileContent: string | null = null;
   let usedExt: string | null = null;
 
   for (const ext of extensions) {
-    const filepath = path.join(techBlogDir, `${slug}${ext}`);
+    const filepath = path.join(postDir, `${slug}${ext}`);
     try {
       fileContent = await readFile(filepath, "utf-8");
       usedExt = ext;
@@ -38,9 +38,8 @@ export async function readFileFromMdorMds(
   return fileContent;
 }
 
-export const getSlugs = async (baseDir: string): Promise<string[]> => {
-  const postDirPath = path.join(baseDir, "./contents/tech-blog");
-  const postFiles = await readdir(postDirPath);
+export const getSlugs = async (postDir: string): Promise<string[]> => {
+  const postFiles = await readdir(postDir);
 
   return postFiles
     .map((file) => {
