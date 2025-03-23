@@ -1,5 +1,5 @@
 ---
-title: node.jsアプリケーションで簡易MCP Client/Serverを作成する
+title: node.jsアプリケーションで簡易MCP クライアント/サーバーを作成する
 slug: 2025-03-17-mcp-app-tutorial
 tags:
   - tech
@@ -9,7 +9,7 @@ tags:
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-16T15:12:25.000Z
-updatedAt: 2025-03-16T15:30:53.000Z
+updatedAt: 2025-03-23T20:48:40+09:00
 views: '21'
 ---
 import { Bookmark } from "../../components/Bookmark";
