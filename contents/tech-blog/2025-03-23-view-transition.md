@@ -1,5 +1,5 @@
 ---
-title: 'React, Next.jsのView Transition API機能を利用したグルメブログを作成してみた'
+title: 'Next.js 15.2で実験的に導入されているViewTransitionでぬるぬる動くグルメブログを作成してみた'
 slug: 2025-03-23-view-transition
 tags:
   - tech
@@ -8,13 +8,14 @@ tags:
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-22T15:48:51.000Z
-updatedAt: 2025-03-24T02:37:40+09:00
+updatedAt: 2025-03-24T02:54:36+09:00
 views: '4'
 ---
 import { Bookmark } from "../../components/Bookmark";
 
 
-以下にView Transition APIを利用した簡易グルメブログを作成したのでその実装を紹介しようと思います。
+以下にNext.js 15.2で実験的に導入されているViewTransitionを利用した簡易グルメブログを作成したのでその実装を紹介しようと思います。
+
 https://sokes-nook.net/gourmet
 
 
