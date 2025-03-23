@@ -10,11 +10,18 @@ isPublished: true
 isDeleted: false
 visitedAt: 2025-01-26
 publishedAt: 2025-03-22T11:09:37+09:00
-updatedAt: 2025-03-23T02:18:26+09:00
+updatedAt: 2025-03-23T02:24:25+09:00
 views: 0
 thumbnail: images/2025-03-22-hayabusa-simokitazawa/PXL_20250126_032111803.avif
 geo: 35.6637306,139.6667333
 ---
+特製泡オマール海老ラーメン。
+
+卓上に味変のチーズや海老酢があって最後まで飽きずに食べることができる。
+
+引っ込んだ場所にあるので見つけるのが少し大変かも。
+
+店内の雰囲気はラーメン屋というよりカフェみたいな感じ。
 
 ## リンク集
 - 食べログ: https://tabelog.com/tokyo/A1318/A131802/13280464/
