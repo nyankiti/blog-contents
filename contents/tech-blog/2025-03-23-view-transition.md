@@ -1,5 +1,5 @@
 ---
-title: react, next.jsのView Transition API機能を利用したグルメブログを解説してみた
+title: 'react, next.jsのView Transition API機能を利用したグルメブログを解説してみた'
 slug: 2025-03-23-view-transition
 tags:
   - tech
@@ -7,9 +7,9 @@ tags:
   - react
 isPublished: true
 isDeleted: false
-publishedAt: 2025-03-23T00:48:51+09:00
-updatedAt: 2025-03-24T02:18:11+09:00
-views: 0
+publishedAt: 2025-03-22T15:48:51.000Z
+updatedAt: 2025-03-23T17:18:11.000Z
+views: '4'
 ---
 import { Bookmark } from "../../components/Bookmark";
 
