@@ -1,5 +1,5 @@
 ---
-title: 'react, next.jsのView Transition API機能を利用したグルメブログを解説してみた'
+title: 'React, Next.jsのView Transition API機能を利用したグルメブログを作成してみた'
 slug: 2025-03-23-view-transition
 tags:
   - tech
@@ -8,18 +8,14 @@ tags:
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-22T15:48:51.000Z
-updatedAt: 2025-03-24T02:33:59+09:00
+updatedAt: 2025-03-24T02:37:40+09:00
 views: '4'
 ---
 import { Bookmark } from "../../components/Bookmark";
 
-## はじめに
-react, next.jsのView Transition API機能を試してみました。
 
-本ブログにも以下にView Transition APIを利用した簡易グルメブログを作成してみました。
+以下にView Transition APIを利用した簡易グルメブログを作成したのでその実装を紹介しようと思います。
 https://sokes-nook.net/gourmet
-
-上記のSPA, MPAのアニメーションの実装方法について解説したいと思います。
 
 
 ## View Transition APIとは？
@@ -191,7 +187,7 @@ export default function FilteredPosts({ initialPosts }: FilteredPostsProps) {
 
 
 ## 感想
-React, Next.jsのサポートにより View Transition APIがかなり簡単に利用できるようになっていました。
+使ってみたいけど実装めんどくさそうだなと思っていたView Transition APIが、React, Next.jsのサポートによりかなり簡単に利用できるようになっていてシンプルに嬉しいなと。
 
 View Transition APIを知らないままMPAの遷移を見たらSPAと勘違いする人が多そう。
 
