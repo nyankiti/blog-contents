@@ -1,12 +1,14 @@
 ---
-title: react, next.jsのView Transition API機能を利用したグルメブログを解説してみた。
+title: react, next.jsのView Transition API機能を利用したグルメブログを解説してみた
 slug: 2025-03-23-view-transition
 tags:
   - tech
+  - next
+  - react
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-23T00:48:51+09:00
-updatedAt: 2025-03-23T20:48:03+09:00
+updatedAt: 2025-03-23T20:55:33+09:00
 views: 0
 ---
 import { Bookmark } from "../../components/Bookmark";
@@ -37,7 +39,7 @@ SPAではJavaScriptとCSS（フレームワーク等も含む）を駆使して�
 Next.jsでのView Transition APIを利用したページ間遷移のアニメーション付与は以下の手順で簡単に実現することができます。
 1. Next.jsを利用しているので、versionを15.2以上にあげる
 2. next.config.tsを修正
-    ```
+    ```ts
     const nextConfig: NextConfig = {
         experimental: {
             viewTransition: true,
@@ -46,7 +48,7 @@ Next.jsでのView Transition APIを利用したページ間遷移のアニメー
     export default nextConfig;
     ```
 3. 遷移前のページにてViewTransitionを指定する(app/gourmet/page.tsx)
-    ```
+    ```tsx
     import { unstable_ViewTransition as ViewTransition } from "react";
     import NextImage from "next/image";
     import NextLink from "next/link";
@@ -81,7 +83,7 @@ Next.jsでのView Transition APIを利用したページ間遷移のアニメー
     </NextLink>
     ```
 4. 遷移後のページにてViewTransitionを指定する(app/gourmet/[slug]/page.tsx)
-    ```
+    ```tsx
     import { unstable_ViewTransition as ViewTransition } from "react";
     import NextImage from "next/image";
     
@@ -121,7 +123,7 @@ Next.jsのドキュメント内でのviewTransitionの解説は以下です。Li
 以下はタグフィルターによって投稿をフィルタリングする際にアニメーションを適用した例です。stateを更新する際に`startTransition`を適用するだけです。
 
 FilteredPosts.tsx
-```
+```tsx
 "use client";
 
 import { useSearchParams } from "next/navigation";
@@ -192,6 +194,9 @@ export default function FilteredPosts({ initialPosts }: FilteredPostsProps) {
 ```
 
 
-## まとめ
-ReactのView Transition APIを利用して簡単にスムーズな遷移アニメーションが簡単に実装できました。
+## 感想
+React, Next.jsのサポートにより View Transition APIが超簡単に利用できるようになっていました。
 View Transition APIを知らないままMPAの遷移を見たらSPAと勘違いする人が多そう。
+SPAの終わりでは？と言っている海外Youtuberもいた
+
+https://www.youtube.com/watch?v=zFWd9tON4j
