@@ -8,7 +8,7 @@ tags:
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-23T00:48:51+09:00
-updatedAt: 2025-03-24T02:18:11+09:00
+updatedAt: 2025-03-24T02:33:08+09:00
 views: 0
 ---
 import { Bookmark } from "../../components/Bookmark";
@@ -120,8 +120,7 @@ Next.jsのドキュメント内でのviewTransitionの解説は以下です。Li
 
 以下はタグフィルターによって投稿をフィルタリングする際にアニメーションを適用した例です。stateを更新する際に`startTransition`を適用するだけです。
 
-FilteredPosts.tsx
-```tsx
+```tsx:FilteredPosts.tsx
 "use client";
 
 import { useSearchParams } from "next/navigation";
@@ -198,4 +197,4 @@ View Transition APIを知らないままMPAの遷移を見たらSPAと勘違い�
 
 SPAの終わりでは？とサムネを作っている海外Youtuberもいた。
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=zFWd9tON4j" />  
+<YouTubeEmbed url="https://www.youtube.com/watch?v=zFWd9tON4js" />  
