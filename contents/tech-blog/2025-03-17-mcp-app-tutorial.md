@@ -9,7 +9,7 @@ tags:
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-16T15:12:25.000Z
-updatedAt: 2025-03-23T20:49:13+09:00
+updatedAt: 2025-03-24T02:20:03+09:00
 views: '23'
 ---
 import { Bookmark } from "../../components/Bookmark";
@@ -341,4 +341,5 @@ export class MyMCPClient {
 
 ## 最後に
 AI Agenet的にLLMを利用するとどうしても利用トークンが爆増しまうので、現状個人のアプリケーションに組み込むにはコストがすごいことになりそうな気がしました🥲
+
 groqの無料枠の範囲内で効率的な情報収集や定期実行等で利用できればよいなーと思ったりしています。

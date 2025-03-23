@@ -8,7 +8,7 @@ tags:
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-23T00:48:51+09:00
-updatedAt: 2025-03-23T20:55:33+09:00
+updatedAt: 2025-03-24T02:18:11+09:00
 views: 0
 ---
 import { Bookmark } from "../../components/Bookmark";
@@ -38,8 +38,8 @@ SPAではJavaScriptとCSS（フレームワーク等も含む）を駆使して�
 ## MPAでのページ間遷移にアニメーションを付与する
 Next.jsでのView Transition APIを利用したページ間遷移のアニメーション付与は以下の手順で簡単に実現することができます。
 1. Next.jsを利用しているので、versionを15.2以上にあげる
-2. next.config.tsを修正
-    ```ts
+2. viewTransitionの機能を利用するためにnext.config.tsを修正
+    ```ts:next.config.ts
     const nextConfig: NextConfig = {
         experimental: {
             viewTransition: true,
@@ -47,8 +47,8 @@ Next.jsでのView Transition APIを利用したページ間遷移のアニメー
     };
     export default nextConfig;
     ```
-3. 遷移前のページにてViewTransitionを指定する(app/gourmet/page.tsx)
-    ```tsx
+3. 遷移前のページにてViewTransitionを指定する
+    ```tsx:app/gourmet/page.tsx
     import { unstable_ViewTransition as ViewTransition } from "react";
     import NextImage from "next/image";
     import NextLink from "next/link";
@@ -82,8 +82,8 @@ Next.jsでのView Transition APIを利用したページ間遷移のアニメー
       />
     </NextLink>
     ```
-4. 遷移後のページにてViewTransitionを指定する(app/gourmet/[slug]/page.tsx)
-    ```tsx
+4. 遷移後のページにてViewTransitionを指定する
+    ```tsx:app/gourmet/[slug]/page.tsx
     import { unstable_ViewTransition as ViewTransition } from "react";
     import NextImage from "next/image";
     
@@ -100,7 +100,7 @@ Next.jsでのView Transition APIを利用したページ間遷移のアニメー
         loading="eager"
         decoding="sync"
         className="w-full object-cover rounded-xl"
-        src={`${BLOG_CONTENTS_URL}/${post.thumbnail}`}
+        src={post.thumbnail}
         width={300}
         height={200}
         alt="Blog Image"
@@ -114,8 +114,6 @@ Next.jsでのView Transition APIを利用したページ間遷移のアニメー
 
 Next.jsのドキュメント内でのviewTransitionの解説は以下です。Live Demoが存在しているのでこちらも参考になるかと思います。
 <Bookmark href="https://nextjs.org/docs/app/api-reference/config/next-config-js/viewTransition" />
-
-自分の環境ではなぜか初期描画時にアニメーションが成功しないバグを確認していますが、実験的な機能であることもあり原因は不明のままです🥲
 
 ## SPAでの再描画にアニメーションを付与する
 `startTransition`を利用してstateを更新するとView Transition APIを利用したアニメーションを適用することができます。
@@ -147,7 +145,6 @@ export default function FilteredPosts({ initialPosts }: FilteredPostsProps) {
       searchParams.get("gourmet")?.split(",").filter(Boolean) || [];
 
     if (locationFilters.length === 0 && gourmetFilters.length === 0) {
-      // setFilteredPosts(initialPosts);
       startTransition(() => {
         setFilteredPosts(initialPosts);
       });
@@ -195,8 +192,10 @@ export default function FilteredPosts({ initialPosts }: FilteredPostsProps) {
 
 
 ## 感想
-React, Next.jsのサポートにより View Transition APIが超簡単に利用できるようになっていました。
-View Transition APIを知らないままMPAの遷移を見たらSPAと勘違いする人が多そう。
-SPAの終わりでは？と言っている海外Youtuberもいた
+React, Next.jsのサポートにより View Transition APIがかなり簡単に利用できるようになっていました。
 
-https://www.youtube.com/watch?v=zFWd9tON4j
+View Transition APIを知らないままMPAの遷移を見たらSPAと勘違いする人が多そう。
+
+SPAの終わりでは？とサムネを作っている海外Youtuberもいた。
+
+<YouTubeEmbed url="https://www.youtube.com/watch?v=zFWd9tON4j" />  
