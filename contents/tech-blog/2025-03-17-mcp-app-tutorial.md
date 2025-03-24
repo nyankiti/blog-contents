@@ -9,8 +9,8 @@ tags:
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-16T15:12:25.000Z
-updatedAt: 2025-03-24T02:20:03+09:00
-views: '23'
+updatedAt: 2025-03-23T17:20:03.000Z
+views: '24'
 ---
 import { Bookmark } from "../../components/Bookmark";
 
