@@ -8,12 +8,12 @@ gourmetTags:
   - カレー
 isPublished: true
 isDeleted: false
-visitedAt: 2024-09-29
-publishedAt: 2025-03-23T11:17:13+09:00
-updatedAt: 2025-03-24T02:21:01+09:00
-views: 0
+visitedAt: 2024-09-29T00:00:00.000Z
+publishedAt: 2025-03-23T02:17:13.000Z
+updatedAt: 2025-03-23T17:21:01.000Z
+views: '20'
 thumbnail: images/2025-03-23-curry-jamming/PXL_20240929_043430409.avif
-geo: 35.5416833,139.4512278
+geo: '35.5416833,139.4512278'
 ---
 
 ## リンク集
