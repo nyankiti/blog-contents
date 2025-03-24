@@ -1,5 +1,5 @@
 ---
-title: Next.js 15.2で(実験的に)導入されたViewTransitionでぬるぬる動くグルメブログを作成してみた
+title: Next.js 15.2で(実験的に)導入されたViewTransitiondでアニメーション付きのグルメブログを作成してみた
 slug: 2025-03-23-view-transition
 tags:
   - tech
@@ -8,7 +8,7 @@ tags:
 isPublished: true
 isDeleted: false
 publishedAt: 2025-03-22T15:48:51.000Z
-updatedAt: 2025-03-23T17:57:21.000Z
+updatedAt: 2025-03-25T00:16:35+09:00
 views: '19'
 ---
 import { Bookmark } from "../../components/Bookmark";
