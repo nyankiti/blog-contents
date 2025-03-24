@@ -6,16 +6,19 @@ import path from "path";
 
 export async function run() {
   const gaApiClient = new GaApiClient();
-  const pvMap = await gaApiClient.getPv();
+  const baseDir = process.env.GITHUB_WORKSPACE
+    ? process.env.GITHUB_WORKSPACE
+    : "/home/runner/work/blog-contents";
+  const targetBasePaths = ["blog", "gourmet"] as const;
+  const contentsPathMap = {
+    blog: path.join(baseDir, "contents/tech-blog"),
+    gourmet: path.join(baseDir, "contents/gourmet"),
+  };
 
-  const techBlogPath = process.env.GITHUB_WORKSPACE
-    ? process.env.GITHUB_WORKSPACE + "/contents/tech-blog"
-    : "/home/runner/work/blog-contents/contents/tech-blog";
-  const gourmetBlogPath = process.env.GITHUB_WORKSPACE
-    ? process.env.GITHUB_WORKSPACE + "/contents/gourmet"
-    : "/home/runner/work/blog-contents/contents/gourmet";
+  for (const targetBasePath of targetBasePaths) {
+    const pvMap = await gaApiClient.getPv(targetBasePath);
+    const contentsPath = contentsPathMap[targetBasePath];
 
-  for (const contentsPath in [techBlogPath, gourmetBlogPath]) {
     for (const slug in pvMap) {
       const filePath = path.join(contentsPath, `${slug}.md`);
 

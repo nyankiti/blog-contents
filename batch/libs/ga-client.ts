@@ -20,7 +20,7 @@ export class GaApiClient {
     });
   }
 
-  async getPv(): Promise<{ [slug: string]: string }> {
+  async getPv(targetBasePath: string): Promise<{ [slug: string]: string }> {
     const [response] = await this.analyticsDataClient.runReport({
       property: `properties/${this.propertyId}`,
       dateRanges: [
@@ -31,27 +31,12 @@ export class GaApiClient {
       ],
       dimensions: [{ name: "pagePath" }],
       dimensionFilter: {
-        orGroup: {
-          expressions: [
-            {
-              filter: {
-                fieldName: "pagePath",
-                stringFilter: {
-                  matchType: "FULL_REGEXP",
-                  value: "/blog/([^/]+)" /* ブログページにのみに絞る */,
-                },
-              },
-            },
-            {
-              filter: {
-                fieldName: "pagePath",
-                stringFilter: {
-                  matchType: "FULL_REGEXP",
-                  value: "/gourmet/([^/]+)" /* グルメページ */,
-                },
-              },
-            },
-          ],
+        filter: {
+          fieldName: "pagePath",
+          stringFilter: {
+            matchType: "FULL_REGEXP",
+            value: `/${targetBasePath}/([^/]+)` /* ブログページにのみに絞る */,
+          },
         },
       },
       metrics: [{ name: "screenPageViews" }],
@@ -64,8 +49,8 @@ export class GaApiClient {
         const segments =
           path?.split("/").filter((segment) => segment !== "") ?? []; // パスをスラッシュで分割
 
-        // "/blog/{slug}" のパスを適切に分割できているかチェック
-        if (segments.length === 2 && segments[0] === "blog") {
+        // "/{targetBasePath}/{slug}" のパスを適切に分割できているかチェック
+        if (segments.length === 2 && segments[0] === targetBasePath) {
           const slug = segments[1];
           const views = row.metricValues[0].value!;
           result[slug] = views;
