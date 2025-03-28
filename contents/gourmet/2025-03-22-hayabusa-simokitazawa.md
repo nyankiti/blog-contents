@@ -11,7 +11,7 @@ isDeleted: false
 visitedAt: 2025-01-26T00:00:00.000Z
 publishedAt: 2025-03-22T02:09:37.000Z
 updatedAt: 2025-03-22T17:24:25.000Z
-views: '78'
+views: '79'
 thumbnail: images/2025-03-22-hayabusa-simokitazawa/PXL_20250126_032111803.avif
 geo: '35.6637306,139.6667333'
 ---

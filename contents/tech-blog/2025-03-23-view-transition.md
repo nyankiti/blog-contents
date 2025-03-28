@@ -9,7 +9,7 @@ isPublished: true
 isDeleted: false
 publishedAt: 2025-03-22T15:48:51.000Z
 updatedAt: 2025-03-24T15:16:35.000Z
-views: '32'
+views: '35'
 ---
 
 以下にNext.js 15.2で実験的に導入されているViewTransitionを利用した簡易グルメブログを作成したのでその実装を紹介しようと思います。
