@@ -12,7 +12,6 @@ publishedAt: 2025-03-01T18:36:53.000Z
 updatedAt: 2025-03-01T18:47:00.000Z
 views: '42'
 ---
-import { Bookmark } from "../../components/Bookmark";
 
 ## OpenAIのBatch APIとは
 <Bookmark href="https://platform.openai.com/docs/guides/batch" />

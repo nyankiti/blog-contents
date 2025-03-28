@@ -13,7 +13,6 @@ publishedAt: 2025-03-27T22:37:18+09:00
 updatedAt: 2025-03-27T23:42:30+09:00
 views: 0
 ---
-import { Bookmark } from "../../components/Bookmark";
 
 Next.jsでMarkdownをレンダリングする際、よく利用されている[react-markdwon](https://github.com/remarkjs/react-markdown)を適用するだけでは通常の img エレメントとなり、Next.jsが提供する[Imageコンポーネント](https://nextjs.org/docs/pages/api-reference/components/image)を利用できません。
 

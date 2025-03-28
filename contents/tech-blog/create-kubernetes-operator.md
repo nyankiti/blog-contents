@@ -13,8 +13,7 @@ isDeleted: false
 publishedAt: 2024-12-16T00:00:00.000Z
 views: '101'
 ---
-import { Bookmark } from "../../components/Bookmark";
-  
+
 ## はじめに  
 
 kubernetesの理解が甘い気がすると漠然と上司に相談したところ、Kubernetes Operatorの自作を勧められたので奮闘した記録です。  

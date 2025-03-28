@@ -14,8 +14,7 @@ isDeleted: false
 publishedAt: 2024-12-03T00:00:00.000Z
 views: '88'
 ---
-import { Bookmark } from "../../components/Bookmark";
-  
+
 本ブログの今月の収益🎉  
   
 ![alt text](images/next-blog-summary/estimated-blog-income.png)  

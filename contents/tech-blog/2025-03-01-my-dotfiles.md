@@ -15,7 +15,6 @@ publishedAt: 2025-03-01T02:31:36.000Z
 updatedAt: 2025-03-01T14:49:21.000Z
 views: '34'
 ---
-import { Bookmark } from "../../components/Bookmark";
 
 ## はじめに
 PCをリプレイス機会があったのでdotfilesを整理しました。

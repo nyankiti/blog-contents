@@ -13,7 +13,6 @@ isDeleted: true
 publishedAt: 2024-10-15T00:00:00.000Z
 views: '74'
 ---
-import { Bookmark } from "../../components/Bookmark";
   
 # standaloneモードの**Apache SolrをDockerで動かしてみる**  
   

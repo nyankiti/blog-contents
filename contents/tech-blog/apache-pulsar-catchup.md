@@ -14,8 +14,7 @@ isDeleted: false
 publishedAt: 2024-11-30T00:00:00.000Z
 views: '46'
 ---
-import { Bookmark } from "../../components/Bookmark";
-  
+
 # Apache Pulsarとは  
   
   

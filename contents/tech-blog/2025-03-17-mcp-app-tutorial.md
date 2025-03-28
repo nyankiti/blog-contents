@@ -12,7 +12,6 @@ publishedAt: 2025-03-16T15:12:25.000Z
 updatedAt: 2025-03-23T17:20:03.000Z
 views: '37'
 ---
-import { Bookmark } from "../../components/Bookmark";
 
 ## はじめに
 巷で話題のMCPについて、Claude DesktopやCursor, ClineなどをMCPクライアントとして紹介されている記事は多いものの、node.jsアプリケーションに組み込む方法は紹介されていないように感じたので、自作のアプリケーションに組み込む方法を紹介します。

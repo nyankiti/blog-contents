@@ -13,8 +13,7 @@ isDeleted: false
 publishedAt: 2024-09-03T15:00:00.000Z
 views: '61'
 ---
-import { Bookmark } from "../../components/Bookmark";
-  
+
 ## はじめに  
   
   
