@@ -10,7 +10,7 @@ updatedAt: 2025-02-24T12:43:23.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-08-13T15:00:00.000Z
-views: '86'
+views: '89'
 ---
 import { Bookmark } from "../../components/Bookmark";
   
