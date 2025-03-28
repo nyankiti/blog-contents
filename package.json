@@ -37,8 +37,6 @@
     "graphql": "^16.10.0",
     "gray-matter": "^4.0.3",
     "openai": "^4.87.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "remark": "^15.0.1",
     "remark-parse": "^11.0.0",
     "strip-markdown": "^6.0.0"
