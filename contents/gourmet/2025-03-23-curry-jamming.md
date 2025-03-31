@@ -11,7 +11,7 @@ isDeleted: false
 visitedAt: 2024-09-29T00:00:00.000Z
 publishedAt: 2025-03-23T02:17:13.000Z
 updatedAt: 2025-03-23T17:21:01.000Z
-views: '28'
+views: '30'
 thumbnail: images/2025-03-23-curry-jamming/PXL_20240929_043430409.avif
 geo: '35.5416833,139.4512278'
 ---
