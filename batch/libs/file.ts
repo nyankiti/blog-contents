@@ -1,6 +1,6 @@
 import path from "node:path";
 import { execSync } from "node:child_process";
-import { readFile, readdir, writeFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 
 export const baseDir = process.env.BASE_DIR || process.cwd();
 
