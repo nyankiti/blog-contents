@@ -6,10 +6,10 @@ tags:
   - flexsearch
   - next
   - fulltextsearch
-isPublished: false
+isPublished: true
 isDeleted: false
 publishedAt: 2025-04-04T22:03:19+09:00
-updatedAt: 2025-04-04T22:40:12+09:00
+updatedAt: 2025-04-04T22:46:39+09:00
 views: 0
 ---
 # Intro
