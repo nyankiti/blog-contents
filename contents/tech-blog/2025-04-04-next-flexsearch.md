@@ -1,5 +1,5 @@
 ---
-title: "flexsearchを用いてNext.jsにサイト内検索を実装する"
+title: "Flexsearchを用いてNext.jsにサイト内検索を実装する"
 slug: "2025-04-04-next-flexsearch"
 tags:
   - tech
@@ -150,7 +150,7 @@ import FlexSearch, { Document } from "flexsearch";
 import { BLOG_CONTENTS_URL } from "@/constants";
 
 /**
- * blog-contents側で生成したtech-blog-search-index.jsonに基づく
+ * generate-search-index.ts 側で生成したtech-blog-search-index.jsonに基づく
  */
 export type PostDocument = {
   slug: string;
