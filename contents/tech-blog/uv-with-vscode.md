@@ -12,7 +12,7 @@ updatedAt: 2024-12-31T02:10:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-12-26T00:00:00.000Z
-views: '800'
+views: '823'
 ---
 
 巷で話題の[uv](https://docs.astral.sh/uv/)を用いてVSCodeの開発環境を構築した記録です。  
