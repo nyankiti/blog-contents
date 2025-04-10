@@ -39,9 +39,9 @@ const castTechBlogFrontMatter = (data: {
   };
 };
 
-const getPostJson = async (slug: string) => {
+const getPostJson = async (slug: string, postDir: string) => {
   try {
-    const fileContent = await readFileFromMdorMds(slug, techBlogDir);
+    const fileContent = await readFileFromMdorMds(slug, postDir);
     if (!fileContent) return null;
     const { data, content } = matter(fileContent);
     const description = await generatePostsDescription(content);
@@ -62,7 +62,7 @@ export const generateTechBlogPostsJson = async () => {
     path.basename(file, path.extname(file))
   );
 
-  const postsJsonPromises = slugs.map((slug) => getPostJson(slug));
+  const postsJsonPromises = slugs.map((slug) => getPostJson(slug, techBlogDir));
   const postsJson = (await Promise.all(postsJsonPromises)).filter(
     (post) => post !== null
   );
@@ -84,7 +84,9 @@ export const generateEnglishTechBlogPostsJson = async () => {
     path.basename(file, path.extname(file))
   );
 
-  const postsJsonPromises = slugs.map((slug) => getPostJson(slug));
+  const postsJsonPromises = slugs.map((slug) =>
+    getPostJson(slug, englishTechBlogDir)
+  );
   const postsJson = (await Promise.all(postsJsonPromises)).filter(
     (post) => post !== null
   );
