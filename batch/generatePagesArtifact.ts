@@ -1,6 +1,9 @@
 import { mkdir } from "node:fs/promises";
 import { copyImageToDist, distDir } from "./libs/file";
-import { generateTechBlogPostsJson } from "./libs/posts";
+import {
+  generateEnglishTechBlogPostsJson,
+  generateTechBlogPostsJson,
+} from "./libs/posts";
 import { generateSearchIndex } from "./libs/generate-search-index";
 import { generateGourmetPostsJson } from "./libs/gourmet";
 
@@ -9,6 +12,7 @@ const main = async () => {
   await mkdir(distDir, { recursive: true });
   // テックブログの記事一覧 JSON の生成
   await generateTechBlogPostsJson();
+  await generateEnglishTechBlogPostsJson();
   // テックブログの検索用のインデックス JSON の生成
   await generateSearchIndex();
   // グルメ記事一覧 JSON の生成

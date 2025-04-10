@@ -2,7 +2,12 @@ import path from "node:path";
 import { readdir, writeFile } from "node:fs/promises";
 import matter from "gray-matter";
 import { generatePostsDescription } from "./generate-posts-description";
-import { baseDir, readFileFromMdorMds, techBlogDir } from "./file";
+import {
+  baseDir,
+  englishTechBlogDir,
+  readFileFromMdorMds,
+  techBlogDir,
+} from "./file";
 
 type TechBlogFrontMatter = {
   title: string;
@@ -71,4 +76,26 @@ export const generateTechBlogPostsJson = async () => {
     JSON.stringify(postsJson, null, 2)
   );
   console.log(`✅ Posts JSON generated at dist/posts.json`);
+};
+
+export const generateEnglishTechBlogPostsJson = async () => {
+  const postFiles = await readdir(englishTechBlogDir);
+  const slugs = postFiles.map((file) =>
+    path.basename(file, path.extname(file))
+  );
+
+  const postsJsonPromises = slugs.map((slug) => getPostJson(slug));
+  const postsJson = (await Promise.all(postsJsonPromises)).filter(
+    (post) => post !== null
+  );
+  postsJson.sort(
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
+
+  writeFile(
+    path.join(baseDir, "dist/en/posts.json"),
+    JSON.stringify(postsJson, null, 2)
+  );
+  console.log(`✅ Posts JSON generated at dist/en/posts.json`);
 };

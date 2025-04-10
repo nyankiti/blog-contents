@@ -8,9 +8,11 @@ export const distDir = path.join(baseDir, "dist");
 
 export const contentsDir = path.join(baseDir, "contents");
 
-export const techBlogDir = path.join(contentsDir, "tech-blog");
+export const techBlogDir = path.join(contentsDir, "ja/tech-blog");
 
-export const gourmetBlogDir = path.join(contentsDir, "gourmet");
+export const englishTechBlogDir = path.join(contentsDir, "en/tech-blog");
+
+export const gourmetBlogDir = path.join(contentsDir, "ja/gourmet");
 
 export async function readFileFromMdorMds(
   slug: string,

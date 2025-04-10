@@ -30,7 +30,8 @@
   "vsnotes.defaultNoteName": "no-title",
   "vsnotes.templates": ["tech_blog", "gourmet_blog"],
   "markdown.copyFiles.destination": {
-    "contents/tech-blog/**/*": "images/${documentBaseName}/",
-    "contents/gourmet/**/*": "images/${documentBaseName}/"
+    "contents/ja/tech-blog/**/*": "images/${documentBaseName}/",
+    "contents/en/tech-blog/**/*": "images/${documentBaseName}/",
+    "contents/ja/gourmet/**/*": "images/${documentBaseName}/"
   }
 }
