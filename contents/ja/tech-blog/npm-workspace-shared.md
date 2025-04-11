@@ -12,7 +12,7 @@ updatedAt: 2025-02-08T07:28:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2025-02-08T00:00:00.000Z
-views: '121'
+views: '122'
 ---
   
 以下のような構成でモノレポではあるものの、それぞれ独立したnodeプロジェクトで運用していた状態から、npm workspaceを用いて共通処理置き場(sharedプロジェクト)を作成したのでその方法を紹介します。  
