@@ -1,6 +1,6 @@
 import * as core from "@actions/core";
 import { GaApiClient } from "./libs/ga-client";
-import { writeFile, readFile, readdir } from "node:fs/promises";
+import { writeFile, readFile } from "node:fs/promises";
 import matter from "gray-matter";
 import path from "path";
 
@@ -30,15 +30,18 @@ export async function run() {
         const file = matter(content);
 
         // views数が更新されていない場合はファイル書き込みをスキップする
+        const viewsBeforeI18n = file.data.viewsBeforeI18n
+          ? Number(file.data.viewsBeforeI18n)
+          : 0;
         if (
-          file.data.views + file.data.viewsBeforeI18n ===
-          pvMap[slug] + file.data.viewsBeforeI18n
+          Number(file.data.views) + viewsBeforeI18n ===
+          Number(pvMap[slug]) + viewsBeforeI18n
         ) {
           core.debug(`Skipping ${slug}: page views unchanged (${pvMap[slug]})`);
           continue;
         }
 
-        file.data.views = pvMap[slug] + file.data.viewsBeforeI18n;
+        file.data.views = Number(pvMap[slug]) + viewsBeforeI18n;
 
         const updatedContent = matter.stringify(file.content, file.data);
 
