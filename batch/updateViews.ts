@@ -6,12 +6,7 @@ import path from "path";
 
 export async function run() {
   const gaApiClient = new GaApiClient();
-  const baseDir = process.env.GITHUB_WORKSPACE
-    ? process.env.GITHUB_WORKSPACE
-    : "/home/runner/work/blog-contents";
-
-  console.log("baseDir", baseDir);
-  console.log("GITHUB_WORKSPACE", process.env.GITHUB_WORKSPACE);
+  const baseDir = "/home/runner/work/blog-contents";
 
   const targetBasePaths = ["blog", "englishBlog", "gourmet"] as const;
   const contentsPathMap = {
