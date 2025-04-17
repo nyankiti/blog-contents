@@ -9,6 +9,10 @@ export async function run() {
   const baseDir = process.env.GITHUB_WORKSPACE
     ? process.env.GITHUB_WORKSPACE
     : "/home/runner/work/blog-contents";
+
+  console.log("baseDir", baseDir);
+  console.log("GITHUB_WORKSPACE", process.env.GITHUB_WORKSPACE);
+
   const targetBasePaths = ["blog", "englishBlog", "gourmet"] as const;
   const contentsPathMap = {
     blog: path.join(baseDir, "contents/ja/tech-blog"),
