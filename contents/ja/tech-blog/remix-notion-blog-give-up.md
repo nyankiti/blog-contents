@@ -13,6 +13,7 @@ isPublished: true
 isDeleted: false
 publishedAt: 2024-08-31T00:00:00.000Z
 views: '100'
+viewsBeforeI18n: '100'
 ---
 
   

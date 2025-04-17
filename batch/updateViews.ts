@@ -1,17 +1,19 @@
 import * as core from "@actions/core";
 import { GaApiClient } from "./libs/ga-client";
-import { writeFile, readFile } from "node:fs/promises";
+import { writeFile, readFile, readdir } from "node:fs/promises";
 import matter from "gray-matter";
 import path from "path";
 
 export async function run() {
   const gaApiClient = new GaApiClient();
-  const baseDir = "/home/runner/work/blog-contents";
+  const baseDir = process.env.GITHUB_WORKSPACE
+    ? process.env.GITHUB_WORKSPACE
+    : "/home/runner/work/blog-contents";
 
-  const targetBasePaths = ["blog", "englishBlog", "gourmet"] as const;
+  const targetBasePaths = ["ja/blog", "en/blog", "gourmet"] as const;
   const contentsPathMap = {
-    blog: path.join(baseDir, "contents/ja/tech-blog"),
-    englishBlog: path.join(baseDir, "contents/en/tech-blog"),
+    "ja/blog": path.join(baseDir, "contents/ja/tech-blog"),
+    "en/blog": path.join(baseDir, "contents/en/tech-blog"),
     gourmet: path.join(baseDir, "contents/ja/gourmet"),
   };
 
@@ -28,12 +30,15 @@ export async function run() {
         const file = matter(content);
 
         // views数が更新されていない場合はファイル書き込みをスキップする
-        if (file.data.views === pvMap[slug]) {
+        if (
+          file.data.views + file.data.viewsBeforeI18n ===
+          pvMap[slug] + file.data.viewsBeforeI18n
+        ) {
           core.debug(`Skipping ${slug}: page views unchanged (${pvMap[slug]})`);
           continue;
         }
 
-        file.data.views = pvMap[slug];
+        file.data.views = pvMap[slug] + file.data.viewsBeforeI18n;
 
         const updatedContent = matter.stringify(file.content, file.data);
 
@@ -41,7 +46,7 @@ export async function run() {
         core.info(`Successfully updated ${slug} views`);
       } catch (err) {
         // ファイルが存在しない、view数の変化がない場合などはこちらのエラーに入る
-        console.error(err);
+        console.error(`no file ${filePath}`);
       }
     }
   }

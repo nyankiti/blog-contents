@@ -11,6 +11,7 @@ isDeleted: false
 publishedAt: 2025-03-01T18:36:53.000Z
 updatedAt: 2025-03-01T18:47:00.000Z
 views: '47'
+viewsBeforeI18n: '47'
 ---
 
 ## OpenAIのBatch APIとは

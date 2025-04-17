@@ -11,6 +11,7 @@ isPublished: true
 isDeleted: false
 publishedAt: 2024-08-13T15:00:00.000Z
 views: '95'
+viewsBeforeI18n: '95'
 ---
   
 # H1 heading  

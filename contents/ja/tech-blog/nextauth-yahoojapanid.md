@@ -13,6 +13,7 @@ isPublished: true
 isDeleted: false
 publishedAt: 2024-09-29T00:00:00.000Z
 views: '122'
+viewsBeforeI18n: '122'
 ---
   
 ## はじめに  

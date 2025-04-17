@@ -12,6 +12,7 @@ isPublished: true
 isDeleted: true
 publishedAt: 2024-10-15T00:00:00.000Z
 views: '74'
+viewsBeforeI18n: '74'
 ---
   
 # standaloneモードの**Apache SolrをDockerで動かしてみる**  

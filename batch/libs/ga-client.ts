@@ -1,5 +1,8 @@
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 
+// ローカル実行;
+import dotenv from "dotenv";
+dotenv.config();
 export class GaApiClient {
   private propertyId: string | undefined;
 
@@ -48,10 +51,8 @@ export class GaApiClient {
         const path = row.dimensionValues[0].value;
         const segments =
           path?.split("/").filter((segment) => segment !== "") ?? []; // パスをスラッシュで分割
-
-        // "/{targetBasePath}/{slug}" のパスを適切に分割できているかチェック
-        if (segments.length === 2 && segments[0] === targetBasePath) {
-          const slug = segments[1];
+        const slug = segments.at(-1);
+        if (slug) {
           const views = row.metricValues[0].value!;
           result[slug] = views;
         }
@@ -79,7 +80,7 @@ export class GaApiClient {
           fieldName: "pagePath",
           stringFilter: {
             matchType: "FULL_REGEXP",
-            value: "/blog/([^/]+)" /* ブログページにのみに絞る */,
+            value: "/ja/blog/([^/]+)" /* ブログページにのみに絞る */,
           },
         },
       },

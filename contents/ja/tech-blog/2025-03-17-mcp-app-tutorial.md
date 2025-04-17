@@ -11,6 +11,7 @@ isDeleted: false
 publishedAt: 2025-03-16T15:12:25.000Z
 updatedAt: 2025-03-23T17:20:03.000Z
 views: '184'
+viewsBeforeI18n: '184'
 ---
 
 ## はじめに

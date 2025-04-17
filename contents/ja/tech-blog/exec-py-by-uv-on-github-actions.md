@@ -14,6 +14,7 @@ isPublished: true
 isDeleted: false
 publishedAt: 2025-01-11T00:00:00.000Z
 views: '66'
+viewsBeforeI18n: '66'
 ---
 
   

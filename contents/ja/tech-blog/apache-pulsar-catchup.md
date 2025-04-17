@@ -13,6 +13,7 @@ isPublished: true
 isDeleted: false
 publishedAt: 2024-11-30T00:00:00.000Z
 views: '49'
+viewsBeforeI18n: '49'
 ---
 
 # Apache Pulsarとは  

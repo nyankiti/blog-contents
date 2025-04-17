@@ -13,6 +13,7 @@ isPublished: true
 isDeleted: false
 publishedAt: 2024-12-03T00:00:00.000Z
 views: '94'
+viewsBeforeI18n: '94'
 ---
 
 本ブログの今月の収益🎉  
