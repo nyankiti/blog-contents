@@ -5,9 +5,9 @@ tags:
   - tech
 isPublished: true
 isDeleted: false
-publishedAt: 2025-04-10T23:35:03+09:00
-updatedAt: 2025-04-11T00:41:01+09:00
-views: 0
+publishedAt: 2025-04-10T14:35:03.000Z
+updatedAt: 2025-04-10T15:41:01.000Z
+views: 3
 ---
 
 ## Intro
