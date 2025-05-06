@@ -10,7 +10,7 @@ updatedAt: 2024-11-04T14:17:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-11-04T00:00:00.000Z
-views: '36'
+views: 37
 viewsBeforeI18n: '36'
 ---
 
