@@ -13,7 +13,7 @@ isPublished: true
 isDeleted: false
 publishedAt: 2025-03-01T02:31:36.000Z
 updatedAt: 2025-03-01T14:49:21.000Z
-views: 66
+views: 68
 viewsBeforeI18n: '39'
 ---
 
