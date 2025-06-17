@@ -7,7 +7,7 @@ isPublished: true
 isDeleted: false
 publishedAt: 2025-04-10T14:35:03.000Z
 updatedAt: 2025-04-10T15:41:01.000Z
-views: 3
+views: 4
 ---
 
 ## Intro
