@@ -12,7 +12,7 @@ updatedAt: 2024-09-28T05:44:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-09-25T00:00:00.000Z
-views: 659
+views: 660
 viewsBeforeI18n: '564'
 ---
   
