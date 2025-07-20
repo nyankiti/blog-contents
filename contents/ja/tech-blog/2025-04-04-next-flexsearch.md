@@ -10,7 +10,7 @@ isPublished: true
 isDeleted: false
 publishedAt: 2025-04-04T13:03:19.000Z
 updatedAt: 2025-04-04T13:46:39.000Z
-views: 72
+views: 74
 viewsBeforeI18n: '5'
 ---
 # Intro
