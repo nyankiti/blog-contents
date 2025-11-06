@@ -11,7 +11,7 @@ updatedAt: 2024-12-16T14:53:00.000Z
 isPublished: true
 isDeleted: false
 publishedAt: 2024-12-16T00:00:00.000Z
-views: 216
+views: 218
 viewsBeforeI18n: '113'
 ---
 
